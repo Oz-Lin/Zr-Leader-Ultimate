@@ -1,0 +1,289 @@
+"Phrases"
+{
+	"Leader is disabled"
+	{
+		"ru"			" {red}[{green}SM{red}]{default} Лидер отключен."
+	}
+
+	"Leader Menu Title"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"ru"			"Меню лидера\n \nСпрайт: {1}\nМаркер: {2}\nМаяк: {3}\nСвечение: {4}\nОтключить все: {5}\nПомощник: {6}\n "
+	}
+
+	"Leader Menu Vote Player"
+	{
+		"ru"			"Меню Голосование Лидер"
+	}
+
+	"Helper Select Player"
+	{
+		"ru"			"Помощник Выбрать игрока"
+	}
+
+	"Menu Vote Remove Leader"
+	{
+		"ru"			"Меню Голосовать Удалить лидера"
+	}
+
+	"Resign from Leader"
+	{
+		"ru"			"Уйти из лидера"
+	}
+
+	"Sprite Menu"
+	{
+		"ru"			"Меню спрайтов"
+	}
+
+	"Defend"
+	{
+		"ru"			"Защищать"
+	}
+
+	"Follow"
+	{
+		"ru"			"Следовать"
+	}
+
+	"None"
+	{
+		"ru"			"Никто"
+	}
+
+	"Marker Menu"
+	{
+		"ru"			"Маркерное меню"
+	}
+
+	"Toggle Beacon"
+	{
+		"ru"			"Переключить маяк"
+	}
+
+	"Toggle Glow"
+	{
+		"ru"			"Переключить свечение"
+	}
+
+	"Toggle Mute"
+	{
+		"ru"			"Замутить всех"
+	}
+
+	"Select Helper"
+	{
+		"ru"			"Выберите помощника"
+	}
+
+	"Remove Helper"
+	{
+		"ru"			"Удалить помощника"
+	}
+
+	"Leader Menu Title Sprite"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"ru"			"Спрайт меню лидера\n \nСпрайт: {1}\nМаркер: {2}\nМаяк: {3}\nСвечение: {4}\nОтключить все: {5}\nПомощник: {6}\n "
+	}
+
+	"No Sprite"
+	{
+		"ru"			"Удалить спрайт"
+	}
+
+	"Defend Here"
+	{
+		"ru"			"Защищайся здесь"
+	}
+
+	"Follow Me"
+	{
+		"ru"			"Подписывайтесь на меня"
+	}
+
+	"Leader Menu Title Marker"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"ru"			"Маркер меню лидера\n \nСпрайт: {1}\nМаркер: {2}\nМаяк: {3}\nСвечение: {4}\nОтключить все: {5}\nПомощник: {6}\n "
+	}
+
+	"Remove Marker"
+	{
+		"ru"			"Удалить все отметки"
+	}
+
+	"Defend Marker"
+	{
+		"ru"			"Маркер защиты"
+	}
+
+	"Players Menu"
+	{
+		"#format"		"{1:i},{2:i}"
+		"ru"			"Голоса {1}/{2}"
+	}
+
+	"Mute All"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Лидер мутировал всех игроков!"
+	}
+
+	"Remove Mute All"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Все игроки больше не мутировали!"
+	}
+
+	"Leader has been removed"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Текущий лидер удален!"
+	}
+
+	"The current leader"
+	{
+		"#format"		"{1:N}"
+		"ru"			" {red}[{green}Leader{red}]{default} Текущий лидер {purple}{1}{default}!"
+	}
+
+	"No current leader"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Действующего лидера нет!"
+	}
+
+	"This Player is not the current leader"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Этот игрок не является текущим лидером!"
+	}
+
+	"Leader has been removed!"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Текущий лидер удален!"
+	}
+
+	"The new leader"
+	{
+		"#format"		"{1:N}"
+		"ru"			" {red}[{green}Leader{red}] {purple}{1}{default} новый лидер!"
+	}
+
+	"You are now the leader"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Теперь ты лидер! Введите !leader, чтобы открыть меню выноски."
+	}
+
+	"The target has to be alive"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Цель должна быть жива!"
+	}
+
+	"Usage sm_leader"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Применение: sm_leader <по желанию: client|#userid>"
+	}
+
+	"Resigned from being leader"
+	{
+		"#format"		"{1:N}"
+		"ru"			" {red}[{green}Leader{red}] {purple}{1}{default} ушел с поста лидера!"
+	}
+
+	"Sprite removed"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Спрайт удален."
+	}
+
+	"Sprite changed to Defend Here"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Спрайт изменен на '{purple}Защищайся здесь{default}'."
+	}
+
+	"Sprite changed to Follow Me"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Спрайт изменен на '{purple}Подписывайтесь на меня{default}'."
+	}
+
+	"Marker removed"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Все отметки удалены."
+	}
+
+	"Defend Here marker placed"
+	{
+		"#format"		"{1:i}"
+		"ru"			" {red}[{green}Leader{red}]{default} 'Защищайся здесь' маркер установлен - {purple}{1}{default}."
+	}
+
+	"The leader has disconnected"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Лидер отключился!"
+	}
+
+	"The leader has died"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Вождь умер!"
+	}
+
+	"The leader has been infected"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Лидер заражен!"
+	}
+
+	"Leader Chat"
+	{
+		"#format"		"{1:N},{2:s}"
+		"ru"			" {red}[{green}Leader{red}]{default} {purple}{1}{default}: {purple}{2}{default}"
+	}
+
+	"Voting for leader is disabled"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Голосование за лидера отключено."
+	}
+
+	"There is already a leader"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Уже есть лидер!"
+	}
+
+	"You ve already voted for this person"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Вы уже голосовали за этого человека!"
+	}
+
+	"You have to vote for a human"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Голосовать надо за человека!"
+	}
+
+	"You are not a human only humans vote"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Вы не человек, голосуют только люди!"
+	}
+
+	"Has voted for"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"ru"			" {red}[{green}Leader{red}] {purple}{1}{default} проголосовал за {purple}{2}{default} быть лидером ({purple}{3}{default}/{purple}{4}{default} голосов.)"
+	}
+
+	"Has voted for Remove"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"ru"			" {red}[{green}Leader{red}] {purple}{1}{default} проголосовал за {purple}{2}{default} перестать быть лидером ({purple}{3}{default}/{purple}{4}{default} голосов.)"
+	}
+
+	"Has been voted to be the new leader"
+	{
+		"#format"		"{1:N}"
+		"ru"			" {red}[{green}Leader{red}] {purple}{1}{default} был избран новым лидером!"
+	}
+
+	"You are not a human"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Ты не человек!"
+	}
+
+	"Voting to remove leader is disabled"
+	{
+		"ru"			" {red}[{green}Leader{red}]{default} Голосование за удаление лидера отключено."
+	}
+}

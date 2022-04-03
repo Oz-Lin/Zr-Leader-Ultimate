@@ -75,6 +75,12 @@ public void ToggleMute(int client)
 
 stock void AddMute(int client)
 {
+	if(!g_eCvarsList.g_bCVAR_DISABLE)
+	{
+		CReplyToCommand(client, "%t", "Leader is disabled");
+		return;
+	}
+
 	if (!g_bMuteStatus)
 	{
 		g_bMuteStatus = true;

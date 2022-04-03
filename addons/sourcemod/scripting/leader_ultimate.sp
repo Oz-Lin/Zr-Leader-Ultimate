@@ -44,7 +44,7 @@
 #define PLUGIN_NAME           "Leader-Ultimate"
 #define PLUGIN_AUTHOR         "Anubis"
 #define PLUGIN_DESCRIPTION    "Allows for a human to be a leader, and give them special functions with it."
-#define PLUGIN_VERSION        "1.0"
+#define PLUGIN_VERSION        "1.1"
 #define PLUGIN_URL            "https://github.com/Stewart-Anubis"
 
 #include "leader/global"

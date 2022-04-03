@@ -40,6 +40,12 @@ void VotesOnCommandsCreate()
 public Action Command_VoteLeader(int client, int argc)
 {
 	if(!IsValidClient(client)) return Plugin_Handled;
+	
+	if(!g_eCvarsList.g_bCVAR_DISABLE)
+	{
+		CReplyToCommand(client, "%t", "Leader is disabled");
+		return Plugin_Handled;
+	}
 
 	if(!g_eCvarsList.g_bCVAR_ALLOW_VOTING)
 	{
@@ -135,6 +141,12 @@ public Action VoteLeader(int client, int target)
 public Action Command_VoteRemoveLeader(int client, int argc)
 {
 	if(!IsValidClient(client)) return Plugin_Handled;
+
+	if(!g_eCvarsList.g_bCVAR_DISABLE)
+	{
+		CReplyToCommand(client, "%t", "Leader is disabled");
+		return Plugin_Handled;
+	}
 
 	if(!g_eCvarsList.g_bCVAR_ALLOW_VOTING)
 	{

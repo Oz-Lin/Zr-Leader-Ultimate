@@ -6,7 +6,7 @@
 * Sorry for my English.
 
 * Author Anubis.
-* Version = 1.0
+* Version = 1.1
 
 ### Decription:Zr-Leader-Ultimate
 
@@ -26,12 +26,14 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * The leader can mute too many players for a set time
 * The leader can now appoint a helper.
 * The leader and helper can shine through walls.
+* Added cvar to disable plugin. "sm_leader_disable"
 
 ### Server ConVars
 
+* sm_leader_disable - Disable Plugin. 1 = On 0 = Off (Default: "1")
 * sm_leader_allow_votes - Determines whether players can vote for leaders. (Default: "1")
 * sm_leader_defend_vmt - The defend here .vmt file (Default: "materials/sg/sgdefend.vmt")
-* vsm_leader_defend_vtf - The defend here .vtf file (Default: "materials/sg/sgdefend.vtf")
+* sm_leader_defend_vtf - The defend here .vtf file (Default: "materials/sg/sgdefend.vtf")
 * sm_leader_follow_vmt - The follow me .vmt file (Default: "materials/sg/sgfollow.vtf")
 * sm_leader_follow_vtf - The follow me .vtf file (Default: "materials/sg/sgfollow.vtf")
 * sm_leader_admin_leader - Determines whether Admin can access menu leader, without voting. (Default: "1")

@@ -77,6 +77,14 @@ public void SetLeaderHelper(int client)
 
 public Action RemoveTheLeader(int client, int args)
 {
+	if(!IsValidClient(client)) return Plugin_Handled;
+
+	if(!g_eCvarsList.g_bCVAR_DISABLE)
+	{
+		CReplyToCommand(client, "%t", "Leader is disabled");
+		return Plugin_Handled;
+	}
+
 	if(IsValidClient(g_iLeaderClient))
 	{
 		CPrintToChatAll("%t", "Leader has been removed!");
@@ -112,6 +120,14 @@ public void RemoveLeader(int client)
 
 public Action CurrentLeader(int client, int args)
 {
+	if(!IsValidClient(client)) return Plugin_Handled;
+
+	if(!g_eCvarsList.g_bCVAR_DISABLE)
+	{
+		CReplyToCommand(client, "%t", "Leader is disabled");
+		return Plugin_Handled;
+	}
+
 	if(IsValidClient(g_iLeaderClient))
 	{
 		CPrintToChat(client, "%t", "The current leader", g_iLeaderClient);

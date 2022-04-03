@@ -1,0 +1,289 @@
+"Phrases"
+{
+	"Leader is disabled"
+	{
+		"pt"			" {red}[{green}SM{red}]{default} Leader Desativado."
+	}
+
+	"Leader Menu Title"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"pt"			"Líder Menu\n \nSprite: {1}\nMarcas: {2}\nSinalizador:  {3}\nBrilho: {4}\nMute Todos: {5}\nAjudante: {6}\n "
+	}
+
+	"Leader Menu Vote Player"
+	{
+		"pt"			"Menu de Votação de Líder"
+	}
+
+	"Helper Select Player"
+	{
+		"pt"			"Seleção de Ajudante"
+	}
+
+	"Menu Vote Remove Leader"
+	{
+		"pt"			"Menu de Votação para Remover Líder"
+	}
+
+	"Resign from Leader"
+	{
+		"pt"			"Renunciar Líder"
+	}
+
+	"Sprite Menu"
+	{
+		"pt"			"Sprite Menu"
+	}
+
+	"Defend"
+	{
+		"pt"			"Defender"
+	}
+
+	"Follow"
+	{
+		"pt"			"Seguir"
+	}
+
+	"None"
+	{
+		"pt"			"Nenhum"
+	}
+
+	"Marker Menu"
+	{
+		"pt"			"Menu de Marcas"
+	}
+
+	"Toggle Beacon"
+	{
+		"pt"			"Alterar Sinalizador"
+	}
+
+	"Toggle Glow"
+	{
+		"pt"			"Alterar Brilho"
+	}
+
+	"Toggle Mute"
+	{
+		"pt"			"Alterar Mute"
+	}
+
+	"Select Helper"
+	{
+		"pt"			"Seleção Ajudante"
+	}
+
+	"Remove Helper"
+	{
+		"pt"			"Remover Ajudante"
+	}
+
+	"Leader Menu Title Sprite"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"pt"			"Líder Menu Sprite\n \nSprite: {1}\nMarcas: {2}\nSinalizador:  {3}\nBrilho: {4}\nMute Todos: {5}\nAjudante: {6}\n "
+	}
+
+	"No Sprite"
+	{
+		"pt"			"Remover Sprite"
+	}
+
+	"Defend Here"
+	{
+		"pt"			"Defender Aqui"
+	}
+
+	"Follow Me"
+	{
+		"pt"			"Siga-me"
+	}
+
+	"Leader Menu Title Marker"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"pt"			"Leader Menu Marcas\n \nSprite: {1}\nMarcas: {2}\nSinalizador:  {3}\nBrilho: {4}\nMute Todos: {5}\nAjudante: {6}\n "
+	}
+
+	"Remove Marker"
+	{
+		"pt"			"Remover todos os Marcadores"
+	}
+
+	"Defend Marker"
+	{
+		"pt"			"Marcar Defender Aqui"
+	}
+
+	"Players Menu"
+	{
+		"#format"		"{1:i},{2:i}"
+		"pt"			"Votos {1}/{2}"
+	}
+
+	"Mute All"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} O líder mutou todos os jogadores!"
+	}
+
+	"Remove Mute All"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Todos os jogadores não estão mais mutados!"
+	}
+
+	"Leader has been removed"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} O líder atual foi removido!"
+	}
+
+	"The current leader"
+	{
+		"#format"		"{1:N}"
+		"pt"			" {red}[{green}Líder{red}]{default} O líder atual é {purple}{1}{default}!"
+	}
+
+	"No current leader"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Não existe um Líder!"
+	}
+
+	"This Player is not the current leader"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Este jogador não é o líder atual!"
+	}
+
+	"Leader has been removed!"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} O líder atual foi removido!"
+	}
+
+	"The new leader"
+	{
+		"#format"		"{1:N}"
+		"pt"			" {red}[{green}Líder{red}] {purple}{1}{default} é o novo Líder!"
+	}
+
+	"You are now the leader"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Você agora é o líder! Digite !leader para abrir o menu do Líder."
+	}
+
+	"The target has to be alive"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} O player tem que estar vivo!"
+	}
+
+	"Usage sm_leader"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Usage: sm_leader <optional: client|#userid>"
+	}
+
+	"Resigned from being leader"
+	{
+		"#format"		"{1:N}"
+		"pt"			" {red}[{green}Líder{red}] {purple}{1}{default} renunciou ao cargo de líder!"
+	}
+
+	"Sprite removed"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Sprite removido."
+	}
+
+	"Sprite changed to Defend Here"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Sprite alterado para '{purple}Defender Aqui{default}'."
+	}
+
+	"Sprite changed to Follow Me"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Sprite alterado para '{purple}Siga Me{default}'."
+	}
+
+	"Marker removed"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Todas os marcadores removidos."
+	}
+
+	"Defend Here marker placed"
+	{
+		"#format"		"{1:i}"
+		"pt"			" {red}[{green}Líder{red}]{default} Marcador 'Defenda Aqui' colocado - {purple}{1}{default}."
+	}
+
+	"The leader has disconnected"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} O Líder se desconectou!"
+	}
+
+	"The leader has died"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} O Líder morreu!"
+	}
+
+	"The leader has been infected"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} O Líder foi infectado!"
+	}
+
+	"Leader Chat"
+	{
+		"#format"		"{1:N},{2:s}"
+		"pt"			" {red}[{green}Leader{red}]{default} {purple}{1}{default}: {purple}{2}{default}"
+	}
+
+	"Voting for leader is disabled"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} A votação para Líder está desativada."
+	}
+
+	"There is already a leader"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Já existe um Líder!"
+	}
+
+	"You ve already voted for this person"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Você já votou nesta pessoa!"
+	}
+
+	"You have to vote for a human"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Você tem que votar em um humano!"
+	}
+
+	"You are not a human only humans vote"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Você não é um humano, apenas os humanos votam!"
+	}
+
+	"Has voted for"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"pt"			" {red}[{green}Líder{red}] {purple}{1}{default} votou em {purple}{2}{default} para Líder ({purple}{3}{default}/{purple}{4}{default} votos)"
+	}
+
+	"Has voted for Remove"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"pt"			" {red}[{green}Líder{red}] {purple}{1}{default} votou em {purple}{2}{default} para deixar de ser Líder ({purple}{3}{default}/{purple}{4}{default} votos)"
+	}
+
+	"Has been voted to be the new leader"
+	{
+		"#format"		"{1:N}"
+		"pt"			" {red}[{green}Líder{red}] {purple}{1}{default} foi eleito o novo Líder!"
+	}
+
+	"You are not a human"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} Você não é humano!"
+	}
+
+	"Voting to remove leader is disabled"
+	{
+		"pt"			" {red}[{green}Líder{red}]{default} A votação para remover o líder está desativada."
+	}
+}

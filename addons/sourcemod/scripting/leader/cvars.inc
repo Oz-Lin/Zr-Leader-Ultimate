@@ -29,6 +29,7 @@
  * or <http://www.sourcemod.net/license.php>.
  */
 
+ConVar CVAR_DISABLE = null;
 ConVar CVAR_VDEFEND_VTF = null;
 ConVar CVAR_VDEFEND_VMT = null;
 ConVar CVAR_VFOLLOW_VTF = null;
@@ -57,6 +58,7 @@ void CvarsInit()
 
 void CvarsCreate()
 {
+	CVAR_DISABLE = CreateConVar("sm_leader_disable", "1", "Disable Plugin. 1 = On 0 = Off");
 	CVAR_VDEFEND_VTF = CreateConVar("sm_leader_defend_vtf", "materials/sg/sgdefend.vtf", "The defend here .vtf file");
 	CVAR_VDEFEND_VMT = CreateConVar("sm_leader_defend_vmt", "materials/sg/sgdefend.vmt", "The defend here .vmt file");
 	CVAR_VFOLLOW_VTF = CreateConVar("sm_leader_follow_vtf", "materials/sg/sgfollow.vtf", "The follow me .vtf file");
@@ -69,6 +71,7 @@ void CvarsCreate()
 	CVAR_TIMER_REMOVE_MUTE = CreateConVar("sm_leader_timer_removemute", "15.0", "Determine how long the players were speechless after applying the Mute All (Avoid cheating leader).");
 	CVAR_GLOW_COLOR = CreateConVar("sm_leader_glow_color", "72 96 144", "Determines R G B glow colors for Leader\nFormat should be \"R G B\" (with spaces).");
 
+	CVAR_DISABLE.AddChangeHook(ConVarChange);
 	CVAR_VDEFEND_VTF.AddChangeHook(ConVarChange);
 	CVAR_VDEFEND_VMT.AddChangeHook(ConVarChange);
 	CVAR_VFOLLOW_VTF.AddChangeHook(ConVarChange);
@@ -93,6 +96,7 @@ public void ConVarChange(ConVar CVar, const char[] oldVal, const char[] newVal)
 
 public void GetConVars()
 {
+	g_eCvarsList.g_bCVAR_DISABLE = CVAR_DISABLE.BoolValue;
 	CVAR_VDEFEND_VTF.GetString(g_eCvarsList.g_sCVAR_VDEFEND_VTF, sizeof(g_eCvarsList.g_sCVAR_VDEFEND_VTF));
 	CVAR_VDEFEND_VMT.GetString(g_eCvarsList.g_sCVAR_VDEFEND_VMT, sizeof(g_eCvarsList.g_sCVAR_VDEFEND_VMT));
 	CVAR_VFOLLOW_VTF.GetString(g_eCvarsList.g_sCVAR_VFOLLOW_VTF, sizeof(g_eCvarsList.g_sCVAR_VFOLLOW_VTF));

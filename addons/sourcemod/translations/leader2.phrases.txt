@@ -1,5 +1,10 @@
 "Phrases"
 {
+	"Leader is disabled"
+	{
+		"en"			" {red}[{green}SM{red}]{default} Leader Disabled."
+	}
+	
 	"Leader Menu Title"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"

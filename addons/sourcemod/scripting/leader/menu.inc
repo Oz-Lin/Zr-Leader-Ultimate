@@ -37,6 +37,14 @@ void MenuOnCommandsCreate()
 
 public Action Command_Leader(int client, int args)
 {
+	if(!IsValidClient(client)) return Plugin_Handled;
+
+	if(!g_eCvarsList.g_bCVAR_DISABLE)
+	{
+		CReplyToCommand(client, "%t", "Leader is disabled");
+		return Plugin_Handled;
+	}
+
 	if(GetClientTeam(client) == 2)
 	{
 		CReplyToCommand(client, "%t", "You are not a human");
