@@ -1,16 +1,14 @@
-# Zr-Leader2-Anubis-Edition
+# Zr-Leader-Ultimate
  
 ### Improved version of zombiereloaded plugin with support for CS:GO and CS:S
 
-* This plugin is an updated version of AntiTeal plugin, under a new author.
-
-* Test & Compile, SouceMod 1.10.0-6492
+* Test & Compile, SouceMod 1.10.0-6528
 * Sorry for my English.
 
 * Author Anubis.
-* Version = 3.2
+* Version = 1.0
 
-### Decription:Zr-Leader2-Anubis-Edition
+### Decription:Zr-Leader-Ultimate
 
 * Allows for an admin to select or for regular players to vote for a human to be the leader for the current round. 
 * The leader gets special perks, like the ability to put defend here / follow me sprites above their head, 
@@ -26,6 +24,8 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * Possibility to remain leader until the map is changed.
 * Possibility of placing several markers.
 * The leader can mute too many players for a set time
+* The leader can now appoint a helper.
+* The leader and helper can shine through walls.
 
 ### Server ConVars
 
@@ -35,6 +35,9 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_leader_follow_vmt - The follow me .vmt file (Default: "materials/sg/sgfollow.vtf")
 * sm_leader_follow_vtf - The follow me .vtf file (Default: "materials/sg/sgfollow.vtf")
 * sm_leader_admin_leader - Determines whether Admin can access menu leader, without voting. (Default: "1")
+* sm_leader_timer_removemute - Determine how long the players were speechless after applying the Mute All (Avoid cheating leader). (Default: "15.0")
+* sm_leader_glow_color - Determines R G B glow colors for Leader\nFormat should be \"R G B\" (with spaces). (Default: "72 96 144")
+
 
 ##New
 
@@ -65,5 +68,9 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_removeleader - Removes the current leader.
 * sm_rl - Removes the current leader.
 
-![alt text](https://i.ibb.co/tD28HrW/11.jpg)
-![alt text](https://i.ibb.co/m9wmqRC/22.jpg)
+![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img1.jpg)
+![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img2.jpg)
+![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img3.jpg)
+![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img4.jpg)
+![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img5.jpg)
+![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img6.jpg)
