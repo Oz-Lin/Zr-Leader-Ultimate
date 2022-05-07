@@ -38,7 +38,8 @@ public void MuteOnClientPutInServer(int client)
 {
 	if (IsValidClient(client) && g_bMuteStatus)
 	{
-		BaseComm_SetClientMute(client, true);
+		//BaseComm_SetClientMute(client, true);
+		SetClientListeningFlags(client, VOICE_MUTED);
 		g_bMuteClient[client] = true;
 	}
 	else if (IsValidClient(client) && !g_bMuteStatus)
@@ -88,7 +89,8 @@ stock void AddMute(int client)
 		{
 			if (IsValidClient(i) && i != g_iLeaderClient && i != g_iHelperClient)
 			{
-				BaseComm_SetClientMute(i, true);
+				SetClientListeningFlags(i, VOICE_MUTED);
+				//BaseComm_SetClientMute(i, true);
 				g_bMuteClient[i] = true;
 			}
 		}
@@ -104,14 +106,23 @@ public Action TimerRemoveMute(Handle sTime)
 
 stock void RemoveMute()
 {
+	// Is alltalk enabled?
+	bool alltalk = GetConVarBool(FindConVar("sv_alltalk"));
+	
+	// Determine new voice flags based off of alltalk.
+	int voiceflags = alltalk ? VOICE_SPEAKALL | VOICE_LISTENALL : VOICE_TEAM | VOICE_LISTENTEAM;
+	
 	if (g_bMuteStatus)
 	{
 		g_bMuteStatus = false;
-		for (int i = 1; i <= MAXPLAYERS + 1; ++i)
+		// x = Client index.
+		for (int i = 1; i <= MaxClients + 1; ++i)
 		{
 			if (IsValidClient(i) && g_bMuteClient[i])
 			{
-				BaseComm_SetClientMute(i, false);
+				// Apply new voice flags.
+				SetClientListeningFlags(i, voiceflags);
+				//BaseComm_SetClientMute(i, false);
 				g_bMuteClient[i] = false;
 			}
 		}

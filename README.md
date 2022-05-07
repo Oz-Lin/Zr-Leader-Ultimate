@@ -6,7 +6,7 @@
 * Sorry for my English.
 
 * Author Anubis.
-* Version = 1.1
+* Version = 1.2
 
 ### Decription:Zr-Leader-Ultimate
 
