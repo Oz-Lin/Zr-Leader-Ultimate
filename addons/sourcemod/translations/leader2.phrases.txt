@@ -2,13 +2,13 @@
 {
 	"Leader is disabled"
 	{
-		"en"			" {red}[{green}Leader{red}]{default} Leader Disabled."
+		"en"			"{red}[{green}Leader{red}]{default} Leader Disabled."
 	}
 	
 	"Leader Menu Title"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"en"			"Leader Menu\n Sprite: {1} | Marker: {2}\nBeacon:  {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
+		"en"			"Leader Menu [!leader] | Sprite: {1} | Marker: {2}\nBeacon: {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
 	}
 
 	"Leader Menu Vote Player"
@@ -33,7 +33,7 @@
 
 	"Sprite Menu"
 	{
-		"en"			"Sprite Menu"
+		"en"			"Overhead Sprite Menu"
 	}
 
 	"Defend"
@@ -84,7 +84,7 @@
 	"Leader Menu Title Sprite"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"en"			"Leader Menu Sprite\n Sprite: {1} | Marker: {2}\nBeacon:  {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
+		"en"			"Leader Menu Sprite | Sprite: {1} | Marker: {2}\nBeacon:  {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
 	}
 
 	"No Sprite"
@@ -105,12 +105,12 @@
 	"Leader Menu Title Marker"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"en"			"Leader Menu Marker\n Sprite: {1} | Marker: {2}\nBeacon:  {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
+		"en"			"Leader Menu Marker | Sprite: {1} | Marker: {2}\nBeacon:  {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
 	}
 
 	"Remove Marker"
 	{
-		"en"			"Remove All Marks"
+		"en"			"Remove All Markers"
 	}
 
 	"Defend Marker"
@@ -141,12 +141,12 @@
 
 	"Mute All"
 	{
-		"en"			" {red}[{green}Leader{red}]{default} The leader mutated all players!"
+		"en"			" {red}[{green}Leader{red}]{default} The leader has muted all players!"
 	}
 
 	"Remove Mute All"
 	{
-		"en"			" {red}[{green}Leader{red}]{default} All players are no longer mutated!"
+		"en"			" {red}[{green}Leader{red}]{default} All players are no longer muted!"
 	}
 
 	"Leader has been removed"
