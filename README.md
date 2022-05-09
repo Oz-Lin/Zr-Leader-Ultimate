@@ -36,6 +36,12 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_leader_defend_vtf - The defend here .vtf file (Default: "materials/sg/sgdefend.vtf")
 * sm_leader_follow_vmt - The follow me .vmt file (Default: "materials/sg/sgfollow.vtf")
 * sm_leader_follow_vtf - The follow me .vtf file (Default: "materials/sg/sgfollow.vtf")
+* sm_leader_spawn_vmt - The zombie spawn .vmt file (Default: "materials/sg/sgspawn.vtf")
+* sm_leader_spawn_vtf - The zombie spawn .vtf file (Default: "materials/sg/sgspawn.vtf")
+* sm_leader_arrow_vmt - The generic arrow me .vmt file (Default: "materials/gfl/marker.vtf")
+* sm_leader_arrow_vtf - The generic arrow .vtf file (Default: "materials/gfl/marker.vtf")
+* sm_leader_no_doorhug_vmt - The follow me .vmt file (Default: "materials/sg/nodoorhug.vtf")
+* sm_leader_no_doorhug_vtf - The follow me .vtf file (Default: "materials/sg/nodoorhug.vtf")
 * sm_leader_admin_leader - Determines whether Admin can access menu leader, without voting. (Default: "1")
 * sm_leader_timer_removemute - Determine how long the players were speechless after applying the Mute All (Avoid cheating leader). (Default: "15.0")
 * sm_leader_glow_color - Determines R G B glow colors for Leader\nFormat should be \"R G B\" (with spaces). (Default: "72 96 144")
@@ -51,6 +57,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 
 * sm_leader - Access the leader menu OR Set a player to be leader
 * sm_le - Access the leader menu OR Set a player to be leader
+* sm_l - Access the leader menu OR Set a player to be leader
 * sm_currentleader - Shows the current leader.
 * sm_cl - Shows the current leader.
 * sm_voteleader - Votes for the specified player to be leader. Required votes is current player count / 10.
