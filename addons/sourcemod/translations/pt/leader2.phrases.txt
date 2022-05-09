@@ -2,13 +2,13 @@
 {
 	"Leader is disabled"
 	{
-		"pt"			" {red}[{green}SM{red}]{default} Leader Desativado."
+		"pt"			" {red}[{green}Leader{red}]{default} Leader Desativado."
 	}
 
 	"Leader Menu Title"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"pt"			"Líder Menu\n \nSprite: {1}\nMarcas: {2}\nSinalizador:  {3}\nBrilho: {4}\nMute Todos: {5}\nAjudante: {6}\n "
+		"pt"			"Líder Menu\n Sprite: {1} | Marcas: {2}\nSinalizador: {3} | Brilho: {4} | Mute Todos: {5} | Ajudante: {6} "
 	}
 
 	"Leader Menu Vote Player"
@@ -84,7 +84,7 @@
 	"Leader Menu Title Sprite"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"pt"			"Líder Menu Sprite\n \nSprite: {1}\nMarcas: {2}\nSinalizador:  {3}\nBrilho: {4}\nMute Todos: {5}\nAjudante: {6}\n "
+		"pt"			"Líder Menu Sprite\n Sprite: {1} | Marcas: {2}\nSinalizador: {3} | Brilho: {4} | Mute Todos: {5} | Ajudante: {6} "
 	}
 
 	"No Sprite"
@@ -105,7 +105,7 @@
 	"Leader Menu Title Marker"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"pt"			"Leader Menu Marcas\n \nSprite: {1}\nMarcas: {2}\nSinalizador:  {3}\nBrilho: {4}\nMute Todos: {5}\nAjudante: {6}\n "
+		"pt"			"Leader Menu Marcas\n Sprite: {1} | Marcas: {2}\nSinalizador: {3} | Brilho: {4} | Mute Todos: {5} | Ajudante: {6} "
 	}
 
 	"Remove Marker"

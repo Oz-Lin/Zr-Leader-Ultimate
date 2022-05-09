@@ -2,13 +2,13 @@
 {
 	"Leader is disabled"
 	{
-		"en"			" {red}[{green}SM{red}]{default} Leader Disabled."
+		"en"			" {red}[{green}Leader{red}]{default} Leader Disabled."
 	}
 	
 	"Leader Menu Title"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"en"			"Leader Menu\n \nSprite: {1}\nMarker: {2}\nBeacon:  {3}\nGlow: {4}\nMuteAll: {5}\nHelper: {6}\n "
+		"en"			"Leader Menu\n Sprite: {1} | Marker: {2}\nBeacon:  {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
 	}
 
 	"Leader Menu Vote Player"
@@ -84,7 +84,7 @@
 	"Leader Menu Title Sprite"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"en"			"Leader Menu Sprite\n \nSprite: {1}\nMarker: {2}\nBeacon:  {3}\nGlow: {4}\nMuteAll: {5}\nHelper: {6}\n "
+		"en"			"Leader Menu Sprite\n Sprite: {1} | Marker: {2}\nBeacon:  {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
 	}
 
 	"No Sprite"
@@ -105,7 +105,7 @@
 	"Leader Menu Title Marker"
 	{
 		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
-		"en"			"Leader Menu Marker\n \nSprite: {1}\nMarker: {2}\nBeacon:  {3}\nGlow: {4}\nMuteAll: {5}\nHelper: {6}\n "
+		"en"			"Leader Menu Marker\n Sprite: {1} | Marker: {2}\nBeacon:  {3} | Glow: {4} | MuteAll: {5} | Helper: {6} "
 	}
 
 	"Remove Marker"
@@ -118,6 +118,21 @@
 		"en"			"Defend Marker"
 	}
 
+	"Spawn Marker"
+	{
+		"en"			"Zombie TP Marker"
+	}
+
+	"No Doorhug Marker"
+	{
+		"en"			"No Doorhug Marker"
+	}
+
+	"Arrow Marker"
+	{
+		"en"			"Arrow Marker"
+	}
+
 	"Players Menu"
 	{
 		"#format"		"{1:i},{2:i}"
@@ -126,106 +141,125 @@
 
 	"Mute All"
 	{
-		"en"			" {red}[{green}SM{red}]{default} The leader mutated all players!"
+		"en"			" {red}[{green}Leader{red}]{default} The leader mutated all players!"
 	}
 
 	"Remove Mute All"
 	{
-		"en"			" {red}[{green}SM{red}]{default} All players are no longer mutated!"
+		"en"			" {red}[{green}Leader{red}]{default} All players are no longer mutated!"
 	}
 
 	"Leader has been removed"
 	{
-		"en"			" {red}[{green}SM{red}]{default} The current leader has been removed!"
+		"en"			" {red}[{green}Leader{red}]{default} The current leader has been removed!"
 	}
 
 	"The current leader"
 	{
 		"#format"		"{1:N}"
-		"en"			" {red}[{green}SM{red}]{default} The current leader is {purple}{1}{default}!"
+		"en"			" {red}[{green}Leader{red}]{default} The current leader is {purple}{1}{default}!"
 	}
 
 	"No current leader"
 	{
-		"en"			" {red}[{green}SM{red}]{default} There is no current leader!"
+		"en"			" {red}[{green}Leader{red}]{default} There is no current leader!"
 	}
 
 	"This Player is not the current leader"
 	{
-		"en"			" {red}[{green}SM{red}]{default} This Player is not the current leader!"
+		"en"			" {red}[{green}Leader{red}]{default} This player is not the current leader!"
 	}
 
 	"Leader has been removed!"
 	{
-		"en"			" {red}[{green}SM{red}]{default} The current leader has been removed!"
+		"en"			" {red}[{green}Leader{red}]{default} The current leader has been removed!"
 	}
 
 	"The new leader"
 	{
 		"#format"		"{1:N}"
-		"en"			" {red}[{green}SM{red}] {purple}{1}{default} is the new leader!"
+		"en"			" {red}[{green}Leader{red}] {purple}{1}{default} is the new leader!"
 	}
 
 	"You are now the leader"
 	{
-		"en"			" {red}[{green}SM{red}]{default} You are now the leader! Type !leader to open up the leader menu."
+		"en"			" {red}[{green}Leader{red}]{default} You are now the leader! Type !leader to open up the leader menu."
 	}
 
 	"The target has to be alive"
 	{
-		"en"			" {red}[{green}SM{red}]{default} The target has to be alive!"
+		"en"			" {red}[{green}Leader{red}]{default} The target has to be alive!"
 	}
 
 	"Usage sm_leader"
 	{
-		"en"			" {red}[{green}SM{red}]{default} Usage: sm_leader <optional: client|#userid>"
+		"en"			" {red}[{green}Leader{red}]{default} Usage: sm_leader <optional: client|#userid>"
 	}
 
 	"Resigned from being leader"
 	{
 		"#format"		"{1:N}"
-		"en"			" {red}[{green}SM{red}] {purple}{1}{default} has resigned from being leader!"
+		"en"			" {red}[{green}Leader{red}] {purple}{1}{default} has resigned from being leader!"
 	}
 
 	"Sprite removed"
 	{
-		"en"			" {red}[{green}SM{red}]{default} Sprite removed."
+		"en"			" {red}[{green}Leader{red}]{default} Sprite removed."
 	}
 
 	"Sprite changed to Defend Here"
 	{
-		"en"			" {red}[{green}SM{red}]{default} Sprite changed to '{purple}Defend Here{default}'."
+		"en"			" {red}[{green}Leader{red}]{default} Sprite changed to '{purple}Defend Here{default}'."
 	}
 
 	"Sprite changed to Follow Me"
 	{
-		"en"			" {red}[{green}SM{red}]{default} Sprite changed to '{purple}Follow Me{default}'."
+		"en"			" {red}[{green}Leader{red}]{default} Sprite changed to '{purple}Follow Me{default}'."
 	}
 
 	"Marker removed"
 	{
-		"en"			" {red}[{green}SM{red}]{default} All marks removed."
+		"en"			" {red}[{green}Leader{red}]{default} All marks removed."
 	}
 
 	"Defend Here marker placed"
 	{
 		"#format"		"{1:i}"
-		"en"			" {red}[{green}SM{red}]{default} 'Defend Here' marker placed - {purple}{1}{default}."
+		"en"			" {red}[{green}Leader{red}]{default} 'Defend Here' marker placed - {purple}{1}{default}."
 	}
+
+	"Zombie Spawn marker placed"
+	{
+		"#format"		"{1:i}"
+		"en"			"{red}[{green}Leader{red}]{default} 'Zombie Spawn' marker placed - {purple}{1}{default}."
+	}
+
+	"Generic Arrow marker placed"
+	{
+		"#format"		"{1:i}"
+		"en"			"{red}[{green}Leader{red}]{default} 'Generic Arrow' marker placed - {purple}{1}{default}."
+	}
+
+	"No Doorhug marker placed"
+	{
+		"#format"		"{1:i}"
+		"en"			"{red}[{green}Leader{red}]{default} 'Do Not Doorhug' marker placed - {purple}{1}{default}."
+	}
+
 
 	"The leader has disconnected"
 	{
-		"en"			" {red}[{green}SM{red}]{default} The leader has disconnected!"
+		"en"			" {red}[{green}Leader{red}]{default} The leader has disconnected!"
 	}
 
 	"The leader has died"
 	{
-		"en"			" {red}[{green}SM{red}]{default} The leader has died!"
+		"en"			" {red}[{green}Leader{red}]{default} The leader has died!"
 	}
 
 	"The leader has been infected"
 	{
-		"en"			" {red}[{green}SM{red}]{default} The leader has been infected!"
+		"en"			" {red}[{green}Leaderred}]{default} The leader has been infected!"
 	}
 
 	"Leader Chat"
@@ -236,54 +270,58 @@
 
 	"Voting for leader is disabled"
 	{
-		"en"			" {red}[{green}SM{red}]{default} Voting for leader is disabled."
+		"en"			" {red}[{green}Leader{red}]{default} Voting for leader is disabled."
 	}
 
 	"There is already a leader"
 	{
-		"en"			" {red}[{green}SM{red}]{default} There is already a leader!"
+		"en"			" {red}[{green}Leader{red}]{default} There is already a leader!"
 	}
 
 	"You ve already voted for this person"
 	{
-		"en"			" {red}[{green}SM{red}]{default} You've already voted for this person!"
+		"en"			" {red}[{green}Leader{red}]{default} You've already voted for this person!"
 	}
 
 	"You have to vote for a human"
 	{
-		"en"			" {red}[{green}SM{red}]{default} You have to vote for a human!"
+		"en"			" {red}[{green}Leader{red}]{default} You have to vote for a human!"
 	}
 
 	"You are not a human only humans vote"
 	{
-		"en"			" {red}[{green}SM{red}]{default} You are not a human, only humans vote!"
+		"en"			" {red}[{green}Leader{red}]{default} You are not a human, only humans vote!"
 	}
 
 	"Has voted for"
 	{
 		"#format"		"{1:N},{2:N},{3:i},{4:i}"
-		"en"			" {red}[{green}SM{red}] {purple}{1}{default} has voted for {purple}{2}{default} to be the leader ({purple}{3}{default}/{purple}{4}{default} votes)"
+		"en"			" {red}[{green}Leader{red}] {purple}{1}{default} has voted for {purple}{2}{default} to be the leader ({purple}{3}{default}/{purple}{4}{default} votes)"
 	}
 
 	"Has voted for Remove"
 	{
 		"#format"		"{1:N},{2:N},{3:i},{4:i}"
-		"en"			" {red}[{green}SM{red}] {purple}{1}{default} has voted for {purple}{2}{default} to stop being a leader ({purple}{3}{default}/{purple}{4}{default} votes)"
+		"en"			" {red}[{green}Leader{red}] {purple}{1}{default} has voted for {purple}{2}{default} to stop being a leader ({purple}{3}{default}/{purple}{4}{default} votes)"
 	}
 
 	"Has been voted to be the new leader"
 	{
 		"#format"		"{1:N}"
-		"en"			" {red}[{green}SM{red}] {purple}{1}{default} has been voted to be the new leader!"
+		"en"			" {red}[{green}Leader{red}] {purple}{1}{default} has been voted to be the new leader!"
 	}
 
 	"You are not a human"
 	{
-		"en"			" {red}[{green}SM{red}]{default} You are not a human!"
+		"en"			" {red}[{green}Leader{red}]{default} You are not a human!"
 	}
 
 	"Voting to remove leader is disabled"
 	{
-		"en"			" {red}[{green}SM{red}]{default} Voting to remove leader is disabled."
+		"en"			" {red}[{green}Leader{red}]{default} Voting to remove leader is disabled."
+	}
+	"Could not spawn marker"
+	{
+		"en"			"{red}[{green}Leader{red}]{default} Could not spawn marker."
 	}
 }
