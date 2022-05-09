@@ -90,10 +90,10 @@ void MarkerMenu(int client)
 	Format(s_NoDoorhugMarker, sizeof(s_NoDoorhugMarker), "%t", "No Doorhug Marker");
 
 	m_MarkerMenu.SetTitle(s_Title);
-	m_LeaderMenu.AddItem("m_arrowmarker", s_ArrowMarker);
+	m_MarkerMenu.AddItem("m_arrowmarker", s_ArrowMarker);
 	m_MarkerMenu.AddItem("m_defendmarker", s_DefendMarker);
-	m_LeaderMenu.AddItem("m_spawnmarker", s_SpawnMarker);
-	m_LeaderMenu.AddItem("m_nodoorhugmarker", s_NoDoorhugMarker);
+	m_MarkerMenu.AddItem("m_spawnmarker", s_SpawnMarker);
+	m_MarkerMenu.AddItem("m_nodoorhugmarker", s_NoDoorhugMarker);
 	m_MarkerMenu.AddItem("m_removemarker", s_RemoveMarker);
 	m_MarkerMenu.AddItem("", "", ITEMDRAW_NOTEXT);
 
@@ -132,7 +132,7 @@ public int MarkerMenu_Handler(Handle m_MarkerMenu, MenuAction action, int client
 				}
 				else
 				{
-					g_iMarkerCount++;
+					g_iMarkerCount[client]++;
 					g_iMarkerEntities[g_iMarkerCount[client]] = SpawnMarker(client, g_eCvarsList.g_sCVAR_VARROW_VMT);
 					CPrintToChat(client, "%t", "Generic Arrow marker placed" ,g_iMarkerCount[client]);
 					MarkerMenu(client);
