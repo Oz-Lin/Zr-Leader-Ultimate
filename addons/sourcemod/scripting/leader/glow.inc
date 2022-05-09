@@ -87,7 +87,7 @@ public void SetupGlow(int entity)
 	SetEntProp(entity, Prop_Send, "m_nGlowStyle", 0);
 	SetEntPropFloat(entity, Prop_Send, "m_flGlowMaxDist", 10000.0);
 
-	for(int i=0;i<3;i++)
+	for(int i = 0; i < 3; i++)
 	{
 		SetEntData(entity, offset + i, g_iColorsGlow[i], _, true);
 	}

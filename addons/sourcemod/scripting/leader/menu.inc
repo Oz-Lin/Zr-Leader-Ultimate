@@ -10,7 +10,7 @@
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, version 3.0, as published by the
  * Free Software Foundation.
- *
+ * 
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
@@ -33,7 +33,7 @@ void MenuOnCommandsCreate()
 {
 	RegConsoleCmd("sm_leader", Command_Leader, "Opens Leader main menu.");
 	RegConsoleCmd("sm_le", Command_Leader, "Opens Leader main menu.");
-  RegConsoleCmd("sm_l", Command_Leader, "Opens Leader main menu.");
+	RegConsoleCmd("sm_l", Command_Leader, "Opens Leader main menu.");
 }
 
 public Action Command_Leader(int client, int args)
@@ -165,7 +165,7 @@ void LeaderMenu(int client)
 
 	if(g_iMarkerCount[client] != 0) Format(s_TMarker, sizeof(s_TMarker), "%i", g_iMarkerCount[client]);
 	else Format(s_TMarker, sizeof(s_TMarker), "%t", "No");
-
+	
 	if(g_iBeaconSerial[client] != 0) Format(s_TBeacon, sizeof(s_TBeacon), "%t", "Yes");
 	else Format(s_TBeacon, sizeof(s_TBeacon), "%t", "No");
 
@@ -174,7 +174,7 @@ void LeaderMenu(int client)
 
 	if (g_bMuteStatus) Format(s_TBMute, sizeof(s_TBMute), "%t", "Yes");
 	else Format(s_TBMute, sizeof(s_TBMute), "%t", "No");
-
+	
 	if (IsValidClient(g_iHelperClient))
 	{
 		Format(s_THelper, sizeof(s_THelper), "%N", g_iHelperClient);
@@ -267,17 +267,17 @@ public int LeaderMenu_Handler(Handle m_LeaderMenu, MenuAction action, int client
 	}
 	else if(IsValidClient(client) && (g_iLeaderClient != client || g_iHelperClient != client))
 	{
-
+		
 		if (itemNum == MenuCancel_ExitBack || action == MenuAction_Select || action == MenuAction_Cancel)
 		{
 			if (IsValidClient(client) && g_Game == Game_CSGO)
 			{
 				SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
 				SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
-			}
+			}			
 		}
 		else action = MenuAction_Cancel;
-
+		
 	}
 	if (action == MenuAction_Cancel && itemNum != MenuCancel_ExitBack)
 	{
@@ -329,7 +329,7 @@ void Menu_SelectHelperLeader(int client)
 
 	for (int i = 0; i < MaxClients; i++)
 	{
-		if (alphabetClients[i]!=0)
+		if (alphabetClients[i]!=0) 
 		{
 			IntToString(GetClientUserId(alphabetClients[i]), strClientID, sizeof(strClientID));
 			FormatEx(strClientName, sizeof(strClientName), "%N", alphabetClients[i]);
@@ -337,7 +337,7 @@ void Menu_SelectHelperLeader(int client)
 		}
 	}
 
-	if (LeaderHelper.ItemCount == 0)
+	if (LeaderHelper.ItemCount == 0) 
 	{
 		delete(LeaderHelper);
 	}
@@ -360,7 +360,7 @@ public int MenuHandler_LeaderHelper(Menu LeaderHelper, MenuAction action, int cl
 		{
 			char info[32], name[32];
 			int userid, target;
-
+	
 			GetMenuItem(LeaderHelper, itemNum, info, sizeof(info), _, name, sizeof(name));
 			userid = StringToInt(info);
 
@@ -380,17 +380,17 @@ public int MenuHandler_LeaderHelper(Menu LeaderHelper, MenuAction action, int cl
 	}
 	else if(IsValidClient(client) && g_iLeaderClient != client)
 	{
-
+		
 		if (itemNum == MenuCancel_ExitBack || action == MenuAction_Select || action == MenuAction_Cancel)
 		{
 			if (IsValidClient(client) && g_Game == Game_CSGO)
 			{
 				SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
 				SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
-			}
+			}			
 		}
 		else action = MenuAction_Cancel;
-
+		
 	}
 	if (action == MenuAction_Cancel && itemNum != MenuCancel_ExitBack)
 	{

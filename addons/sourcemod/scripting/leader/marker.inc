@@ -46,7 +46,10 @@ void MarkerMenu(int client)
 
 	char s_Title[LENGTH_MAX_TEXT];
 	char s_RemoveMarker[LENGTH_MED_TEXT];
+	char s_ArrowMarker[LENGTH_MED_TEXT];
 	char s_DefendMarker[LENGTH_MED_TEXT];
+	char s_SpawnMarker[LENGTH_MED_TEXT];
+	char s_NoDoorhugMarker[LENGTH_MED_TEXT];
 	char s_TSprite[LENGTH_MED_TEXT];
 	char s_TMarker[LENGTH_MED_TEXT];
 	char s_TBeacon[LENGTH_MED_TEXT];
@@ -82,13 +85,16 @@ void MarkerMenu(int client)
 	Format(s_Title, sizeof(s_Title), "%t", "Leader Menu Title Marker", s_TSprite, s_TMarker, s_TBeacon, s_TGlow, s_TBMute, s_THelper);
 	Format(s_DefendMarker, sizeof(s_DefendMarker), "%t", "Defend Marker");
 	Format(s_RemoveMarker, sizeof(s_RemoveMarker), "%t", "Remove Marker");
+	Format(s_ArrowMarker, sizeof(s_ArrowMarker), "%t", "Arrow Marker");
+	Format(s_SpawnMarker, sizeof(s_SpawnMarker), "%t", "Spawn Marker");
+	Format(s_NoDoorhugMarker, sizeof(s_NoDoorhugMarker), "%t", "No Doorhug Marker");
 
 	m_MarkerMenu.SetTitle(s_Title);
+	m_LeaderMenu.AddItem("m_arrowmarker", s_ArrowMarker);
 	m_MarkerMenu.AddItem("m_defendmarker", s_DefendMarker);
+	m_LeaderMenu.AddItem("m_spawnmarker", s_SpawnMarker);
+	m_LeaderMenu.AddItem("m_nodoorhugmarker", s_NoDoorhugMarker);
 	m_MarkerMenu.AddItem("m_removemarker", s_RemoveMarker);
-	m_MarkerMenu.AddItem("", "", ITEMDRAW_NOTEXT);
-	m_MarkerMenu.AddItem("", "", ITEMDRAW_NOTEXT);
-	m_MarkerMenu.AddItem("", "", ITEMDRAW_NOTEXT);
 	m_MarkerMenu.AddItem("", "", ITEMDRAW_NOTEXT);
 
 	m_MarkerMenu.ExitBackButton = true;
@@ -108,6 +114,30 @@ public int MarkerMenu_Handler(Handle m_MarkerMenu, MenuAction action, int client
 		{
 			char info[32];
 			GetMenuItem(m_MarkerMenu, itemNum, info, sizeof(info));
+
+			if(StrEqual(info, "m_arrowmarker"))
+			{
+				if (g_iMarkerCount[client] >= g_eCvarsList.g_iCVAR_MAX_MARKER)
+				{
+					g_iRemoveMarker[client]++;
+					if (g_iRemoveMarker[client] > g_eCvarsList.g_iCVAR_MAX_MARKER)
+					{
+						g_iRemoveMarker[client] = 1;
+					}
+					RemoveMarker(g_iRemoveMarker[client]);
+					g_iMarkerEntities[g_iRemoveMarker[client]] = SpawnMarker(client, g_eCvarsList.g_sCVAR_VARROW_VMT);
+					CPrintToChat(client, "%t", "Generic Arrow marker placed" ,g_iRemoveMarker[client]);
+					MarkerMenu(client);
+
+				}
+				else
+				{
+					g_iMarkerCount++;
+					g_iMarkerEntities[g_iMarkerCount[client]] = SpawnMarker(client, g_eCvarsList.g_sCVAR_VARROW_VMT);
+					CPrintToChat(client, "%t", "Generic Arrow marker placed" ,g_iMarkerCount[client]);
+					MarkerMenu(client);
+				}
+			}
 
 			if(StrEqual(info, "m_defendmarker"))
 			{
@@ -132,6 +162,55 @@ public int MarkerMenu_Handler(Handle m_MarkerMenu, MenuAction action, int client
 					MarkerMenu(client);
 				}
 			}
+
+			if(StrEqual(info, "m_spawnmarker"))
+			{
+				if (g_iMarkerCount[client] >= g_eCvarsList.g_iCVAR_MAX_MARKER)
+				{
+					g_iRemoveMarker[client]++;
+					if (g_iRemoveMarker[client] > g_eCvarsList.g_iCVAR_MAX_MARKER)
+					{
+						g_iRemoveMarker[client] = 1;
+					}
+					RemoveMarker(g_iRemoveMarker[client]);
+					g_iMarkerEntities[g_iRemoveMarker[client]] = SpawnMarker(client, g_eCvarsList.g_sCVAR_VSPAWN_VMT);
+					CPrintToChat(client, "%t", "Zombie Spawn marker placed" ,g_iRemoveMarker[client]);
+					MarkerMenu(client);
+					
+				}
+				else
+				{
+					g_iMarkerCount[client]++;
+					g_iMarkerEntities[g_iMarkerCount[client]] = SpawnMarker(client, g_eCvarsList.g_sCVAR_VSPAWN_VMT);
+					CPrintToChat(client, "%t", "Zombie Spawn marker placed" ,g_iMarkerCount[client]);
+					MarkerMenu(client);
+				}
+			}
+
+			if(StrEqual(info, "m_nodoorhugmarker"))
+			{
+				if (g_iMarkerCount[client] >= g_eCvarsList.g_iCVAR_MAX_MARKER)
+				{
+					g_iRemoveMarker[client]++;
+					if (g_iRemoveMarker[client] > g_eCvarsList.g_iCVAR_MAX_MARKER)
+					{
+						g_iRemoveMarker[client] = 1;
+					}
+					RemoveMarker(g_iRemoveMarker[client]);
+					g_iMarkerEntities[g_iRemoveMarker[client]] = SpawnMarker(client, g_eCvarsList.g_sCVAR_VNODOORHUG_VMT);
+					CPrintToChat(client, "%t", "No Doorhug marker placed" ,g_iRemoveMarker[client]);
+					MarkerMenu(client);
+					
+				}
+				else
+				{
+					g_iMarkerCount[client]++;
+					g_iMarkerEntities[g_iMarkerCount[client]] = SpawnMarker(client, g_eCvarsList.g_sCVAR_VNODOORHUG_VMT);
+					CPrintToChat(client, "%t", "No Doorhug marker placed" ,g_iMarkerCount[client]);
+					MarkerMenu(client);
+				}
+			}
+
 			if(StrEqual(info, "m_removemarker"))
 			{
 				RemoveAllMarker(client);
