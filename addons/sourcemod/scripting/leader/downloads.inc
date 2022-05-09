@@ -35,11 +35,23 @@ void DownloadsLoad()
 	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VDEFEND_VMT);
 	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VFOLLOW_VTF);
 	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VFOLLOW_VMT);
+	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VSPAWN_VTF);
+	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VSPAWN_VMT);
+	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VARROW_VTF);
+	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VARROW_VMT);
+	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VNODOORHUG_VTF);
+	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VNODOORHUG_VMT);
 
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VDEFEND_VTF, true);
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VDEFEND_VMT, true);
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VFOLLOW_VTF, true);
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VFOLLOW_VMT, true);
+	PrecacheGeneric(g_eCvarsList.g_sCVAR_VSPAWN_VTF, true);
+	PrecacheGeneric(g_eCvarsList.g_sCVAR_VSPAWN_VMT, true);
+	PrecacheGeneric(g_eCvarsList.g_sCVAR_VARROW_VTF, true);
+	PrecacheGeneric(g_eCvarsList.g_sCVAR_VARROW_VMT, true);
+	PrecacheGeneric(g_eCvarsList.g_sCVAR_VNODOORHUG_VTF, true);
+	PrecacheGeneric(g_eCvarsList.g_sCVAR_VNODOORHUG_VMT, true);
 
 	Handle gameConfig = LoadGameConfigFile("funcommands.games");
 	if (gameConfig == null)

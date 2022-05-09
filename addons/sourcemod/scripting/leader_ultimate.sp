@@ -10,7 +10,7 @@
  * This program is free software; you can redistribute it and/or modify it under
  * the terms of the GNU General Public License, version 3.0, as published by the
  * Free Software Foundation.
- * 
+ *
  * This program is distributed in the hope that it will be useful, but WITHOUT
  * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
  * FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
@@ -41,11 +41,11 @@
 
 #pragma newdecls required
 
-#define PLUGIN_NAME           "Leader-Ultimate"
-#define PLUGIN_AUTHOR         "Anubis"
+#define PLUGIN_NAME           "Leader Ultimate OZIG Edition"
+#define PLUGIN_AUTHOR         "Anubis, modified by Oz_Lin"
 #define PLUGIN_DESCRIPTION    "Allows for a human to be a leader, and give them special functions with it."
 #define PLUGIN_VERSION        "1.2"
-#define PLUGIN_URL            "https://github.com/Stewart-Anubis"
+#define PLUGIN_URL            "https://github.com/Oz-Lin"
 
 #include "leader/global"
 #include "leader/leader_ultimate"
