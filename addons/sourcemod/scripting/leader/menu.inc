@@ -133,8 +133,8 @@ void LeaderMenu(int client)
 	SetGlobalTransTarget(client);
 	if (g_Game == Game_CSGO)
 	{
-		SendConVarValue(client, CVAR_MP_MAXMONEY, "0");
-		SendConVarValue(client, CVAR_SV_DISABLE_RADAR, "1");
+		//SendConVarValue(client, CVAR_MP_MAXMONEY, "0");
+		//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, "1");
 	}
 
 	char s_Title[LENGTH_MIN_LINE];
@@ -272,8 +272,8 @@ public int LeaderMenu_Handler(Handle m_LeaderMenu, MenuAction action, int client
 		{
 			if (IsValidClient(client) && g_Game == Game_CSGO)
 			{
-				SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
-				SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
+				//SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
+				//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
 			}			
 		}
 		else action = MenuAction_Cancel;
@@ -283,8 +283,8 @@ public int LeaderMenu_Handler(Handle m_LeaderMenu, MenuAction action, int client
 	{
 		if (IsValidClient(client) && g_Game == Game_CSGO)
 		{
-			SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
-			SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
+			//SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
+			//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
 		}
 	}
 	return 0;
@@ -301,8 +301,8 @@ void Menu_SelectHelperLeader(int client)
 	SetGlobalTransTarget(client);
 	if (g_Game == Game_CSGO)
 	{
-		SendConVarValue(client, CVAR_MP_MAXMONEY, "0");
-		SendConVarValue(client, CVAR_SV_DISABLE_RADAR, "1");
+		//SendConVarValue(client, CVAR_MP_MAXMONEY, "0");
+		//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, "1");
 	}
 
 	char m_title[LENGTH_MAX_TEXT];
@@ -385,8 +385,8 @@ public int MenuHandler_LeaderHelper(Menu LeaderHelper, MenuAction action, int cl
 		{
 			if (IsValidClient(client) && g_Game == Game_CSGO)
 			{
-				SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
-				SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
+				//SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
+				//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
 			}			
 		}
 		else action = MenuAction_Cancel;
@@ -396,8 +396,8 @@ public int MenuHandler_LeaderHelper(Menu LeaderHelper, MenuAction action, int cl
 	{
 		if (IsValidClient(client) && g_Game == Game_CSGO)
 		{
-			SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
-			SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
+			//SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
+			//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
 		}
 	}
 	return 0;

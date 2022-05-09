@@ -138,8 +138,8 @@ public void GetConVars()
 void CvarsFind()
 {
 	CVAR_SV_FORCE_TRANSMIT_PLAYERS = FindConVar("sv_force_transmit_players");
-	CVAR_MP_MAXMONEY = FindConVar("mp_maxmoney");
-	GetConVarString(CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY, sizeof(g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY));
-	CVAR_SV_DISABLE_RADAR = FindConVar("sv_disable_radar");
-	GetConVarString(CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR, sizeof(g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR));
+	//CVAR_MP_MAXMONEY = FindConVar("mp_maxmoney");
+	//GetConVarString(CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY, sizeof(g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY));
+	//CVAR_SV_DISABLE_RADAR = FindConVar("sv_disable_radar");
+	//GetConVarString(CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR, sizeof(g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR));
 }

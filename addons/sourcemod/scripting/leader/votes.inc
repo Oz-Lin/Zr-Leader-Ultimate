@@ -275,8 +275,8 @@ void Menu_VoteLeader_Remove(int client, bool b_RemoveLeader = false)
 	SetGlobalTransTarget(client);
 	if (g_Game == Game_CSGO)
 	{
-		SendConVarValue(client, CVAR_MP_MAXMONEY, "0");
-		SendConVarValue(client, CVAR_SV_DISABLE_RADAR, "1");
+		//SendConVarValue(client, CVAR_MP_MAXMONEY, "0");
+		//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, "1");
 	}
 
 	char m_title[LENGTH_MAX_TEXT];
@@ -370,8 +370,8 @@ public int MenuHandler_VoteLeaderRemove(Menu VoteLeaderRemove, MenuAction action
 	{
 		if (IsValidClient(client))
 		{
-			SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
-			SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
+			//SendConVarValue(client, CVAR_MP_MAXMONEY, g_eCvarsList.g_sCVAR_VALUE_MP_MAXMONEY);
+			//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, g_eCvarsList.g_sCVAR_VALUE_SV_DISABLE_RADAR);
 		}
 	}
 	return 0;
