@@ -1,0 +1,326 @@
+"Phrases"
+{
+	"Leader is disabled"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 指挥系统已禁用."
+	}
+
+	"Leader Menu Title"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"chi"			"指挥菜单 [!leader] | 跟踪标记: {1} | 固定标记: {2}\n灯标: {3} | 高亮: {4} | 全体静音: {5} | 副指挥: {6} "
+	}
+
+	"Leader Menu Vote Player"
+	{
+		"chi"			"指挥投票菜单"
+	}
+
+	"Helper Select Player"
+	{
+		"chi"			"选择副指挥"
+	}
+
+	"Menu Vote Remove Leader"
+	{
+		"chi"			"投票移除指挥"
+	}
+
+	"Resign from Leader"
+	{
+		"chi"			"辞去指挥"
+	}
+
+	"Sprite Menu"
+	{
+		"chi"			"跟踪标记菜单"
+	}
+
+	"Defend"
+	{
+		"chi"			"防守"
+	}
+
+	"Follow"
+	{
+		"chi"			"跟随"
+	}
+
+	"None"
+	{
+		"chi"			"无"
+	}
+
+	"Marker Menu"
+	{
+		"chi"			"标记菜单"
+	}
+
+	"Toggle Beacon"
+	{
+		"chi"			"灯标开关"
+	}
+
+	"Toggle Glow"
+	{
+		"chi"			"高亮开关"
+	}
+
+	"Toggle Mute"
+	{
+		"chi"			"全员静音开关"
+	}
+
+	"Select Helper"
+	{
+		"chi"			"选择副指挥"
+	}
+
+	"Remove Helper"
+	{
+		"chi"			"移除副指挥"
+	}
+
+	"Leader Menu Title Sprite"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"chi"			"跟踪标记菜单 | 跟踪标记: {1} | 固定标记: {2}\n灯标: {3} | 高亮: {4} | 全体静音: {5} | 副指挥: {6} "
+	}
+
+	"No Sprite"
+	{
+		"chi"			"移除跟踪标记"
+	}
+
+	"Defend Here"
+	{
+		"chi"			"守住这里"
+	}
+
+	"Follow Me"
+	{
+		"chi"			"跟随我"
+	}
+
+	"Leader Menu Title Marker"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"chi"			"固定标记菜单 | 跟踪标记: {1} | 固定标记: {2}\n灯标: {3} | 高亮: {4} | 全体静音: {5} | 副指挥: {6} "
+	}
+
+	"Remove Marker"
+	{
+		"chi"			"移除所有标记"
+	}
+
+	"Defend Marker"
+	{
+		"chi"			"守住这里标记"
+	}
+
+	"Spawn Marker"
+	{
+		"chi"			"僵尸传送标记"
+	}
+
+	"No Doorhug Marker"
+	{
+		"chi"			"禁止贴门标记"
+	}
+
+	"Arrow Marker"
+	{
+		"chi"			"箭头标记"
+	}
+
+	"Players Menu"
+	{
+		"#format"		"{1:i},{2:i}"
+		"chi"			"投票计数 {1}/{2}"
+	}
+
+	"Mute All"
+	{
+		"chi"			" {red}[{green}Leader{red}]{default} 指挥暂时静音全体玩家!"
+	}
+
+	"Remove Mute All"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 全体玩家不再被静音!"
+	}
+
+	"Leader has been removed"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 当前指挥已被移除!"
+	}
+
+	"The current leader"
+	{
+		"#format"		"{1:N}"
+		"chi"			"{red}[{green}Leader{red}]{default} 当前指挥是 {purple}{1}{default}!"
+	}
+
+	"No current leader"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 当前没有指挥!"
+	}
+
+	"This Player is not the current leader"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 此玩家不是当前指挥!"
+	}
+
+	"Leader has been removed!"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 当前指挥已被移除!"
+	}
+
+	"The new leader"
+	{
+		"#format"		"{1:N}"
+		"chi"			"{red}[{green}Leader{red}] {purple}{1}{default} 现在是新指挥!"
+	}
+
+	"You are now the leader"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 你现在是指挥! 打字输入 !leader 开启指挥菜单."
+	}
+
+	"The target has to be alive"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 目标玩家必须存活!"
+	}
+
+	"Usage sm_leader"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 用法: sm_leader <可选: client|#userid>"
+	}
+
+	"Resigned from being leader"
+	{
+		"#format"		"{1:N}"
+		"chi"			"{red}[{green}Leader{red}] {purple}{1}{default} 已辞去指挥!"
+	}
+
+	"Sprite removed"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 跟踪标记已移除."
+	}
+
+	"Sprite changed to Defend Here"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 跟踪标记改为 '{purple}守住这里{default}'."
+	}
+
+	"Sprite changed to Follow Me"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 跟踪标记改为 '{purple}跟随我{default}'."
+	}
+
+	"Marker removed"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 所有固定标记已移除."
+	}
+
+	"Defend Here marker placed"
+	{
+		"#format"		"{1:i}"
+		"chi"			"{red}[{green}Leader{red}]{default} '守住这里' 标记已放置 - {purple}{1}{default}."
+	}
+
+	"Zombie Spawn marker placed"
+	{
+		"#format"		"{1:i}"
+		"chi"			"{red}[{green}Leader{red}]{default} '僵尸传送' 标记已放置 - {purple}{1}{default}."
+	}
+
+	"Generic Arrow marker placed"
+	{
+		"#format"		"{1:i}"
+		"chi"			"{red}[{green}Leader{red}]{default} '箭头' 标记已放置 - {purple}{1}{default}."
+	}
+
+	"No Doorhug marker placed"
+	{
+		"#format"		"{1:i}"
+		"chi"			"{red}[{green}Leader{red}]{default} '禁止贴门' 标记已放置 - {purple}{1}{default}."
+	}
+
+	"The leader has disconnected"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 指挥已断开连接!"
+	}
+
+	"The leader has died"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 指挥已阵亡!"
+	}
+
+	"The leader has been infected"
+	{
+		"chi"			"{red}[{green}Leaderred}]{default} 指挥已被感染!"
+	}
+
+	"Leader Chat"
+	{
+		"#format"		"{1:N},{2:s}"
+		"chi"			"{red}[{green}Leader{red}]{default} {purple}{1}{default}: {purple}{2}{default}"
+	}
+
+	"Voting for leader is disabled"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 当前已禁用指挥投票功能."
+	}
+
+	"There is already a leader"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 当前已有指挥官!"
+	}
+
+	"You ve already voted for this person"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 你已对此玩家投票!"
+	}
+
+	"You have to vote for a human"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 你必须给人类玩家投票!"
+	}
+
+	"You are not a human only humans vote"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 你现在不是人类,只有人类才能投票!"
+	}
+
+	"Has voted for"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"chi"			"{red}[{green}Leader{red}] {purple}{1}{default} 已投票选择 {purple}{2}{default} 为指挥官 ({purple}{3}{default}/{purple}{4}{default} 票)"
+	}
+
+	"Has voted for Remove"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"chi"			"{red}[{green}Leader{red}] {purple}{1}{default} 已投票移除指挥官 {purple}{2}{default} ({purple}{3}{default}/{purple}{4}{default} 票)"
+	}
+
+	"Has been voted to be the new leader"
+	{
+		"#format"		"{1:N}"
+		"chi"			"{red}[{green}Leader{red}] {purple}{1}{default} 被投票选为新指挥官!"
+	}
+
+	"You are not a human"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 你不是人类!"
+	}
+
+	"Voting to remove leader is disabled"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 当前已禁用移除指挥投票功能."
+	}
+	"Could not spawn marker"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 无法生成标记."
+	}
+}

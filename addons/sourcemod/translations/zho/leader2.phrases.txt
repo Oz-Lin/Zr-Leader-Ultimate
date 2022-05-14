@@ -1,0 +1,326 @@
+﻿"Phrases"
+{
+	"Leader is disabled"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 指揮系統已禁用."
+	}
+
+	"Leader Menu Title"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"zho"			"指揮菜單 [!leader] | 跟蹤標記: {1} | 固定標記: {2}\n燈標: {3} | 高亮: {4} | 全員靜音: {5} | 副指揮: {6} "
+	}
+
+	"Leader Menu Vote Player"
+	{
+		"zho"			"指揮投票菜單"
+	}
+
+	"Helper Select Player"
+	{
+		"zho"			"選擇副指揮"
+	}
+
+	"Menu Vote Remove Leader"
+	{
+		"zho"			"投票移除指揮"
+	}
+
+	"Resign from Leader"
+	{
+		"zho"			"辭去指揮"
+	}
+
+	"Sprite Menu"
+	{
+		"zho"			"跟蹤標記菜單"
+	}
+
+	"Defend"
+	{
+		"zho"			"防守"
+	}
+
+	"Follow"
+	{
+		"zho"			"跟隨"
+	}
+
+	"None"
+	{
+		"zho"			"無"
+	}
+
+	"Marker Menu"
+	{
+		"zho"			"標記菜單"
+	}
+
+	"Toggle Beacon"
+	{
+		"zho"			"燈標開關"
+	}
+
+	"Toggle Glow"
+	{
+		"zho"			"高亮開關"
+	}
+
+	"Toggle Mute"
+	{
+		"zho"			"全員靜音開關"
+	}
+
+	"Select Helper"
+	{
+		"zho"			"選擇副指揮"
+	}
+
+	"Remove Helper"
+	{
+		"zho"			"移除副指揮"
+	}
+
+	"Leader Menu Title Sprite"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"zho"			"跟蹤標記菜單 | 跟蹤標記: {1} | 固定標記: {2}\n燈標: {3} | 高亮: {4} | 全員靜音: {5} | 副指揮: {6} "
+	}
+
+	"No Sprite"
+	{
+		"zho"			"移除跟蹤標記"
+	}
+
+	"Defend Here"
+	{
+		"zho"			"守住這裡"
+	}
+
+	"Follow Me"
+	{
+		"zho"			"跟隨我"
+	}
+
+	"Leader Menu Title Marker"
+	{
+		"#format"		"{1:s},{2:s},{3:s},{4:s},{5:s},{6:s}"
+		"zho"			"固定標記菜單 | 跟蹤標記: {1} | 固定標記: {2}\n燈標: {3} | 高亮: {4} | 全員靜音: {5} | 副指揮: {6} "
+	}
+
+	"Remove Marker"
+	{
+		"zho"			"移除所有標記"
+	}
+
+	"Defend Marker"
+	{
+		"zho"			"守住這裡標記"
+	}
+
+	"Spawn Marker"
+	{
+		"zho"			"僵屍傳送標記"
+	}
+
+	"No Doorhug Marker"
+	{
+		"zho"			"禁止貼門標記"
+	}
+
+	"Arrow Marker"
+	{
+		"zho"			"箭頭標記"
+	}
+
+	"Players Menu"
+	{
+		"#format"		"{1:i},{2:i}"
+		"zho"			"投票計數 {1}/{2}"
+	}
+
+	"Mute All"
+	{
+		"zho"			" {red}[{green}Leader{red}]{default} 指揮暫時靜音全體玩家!"
+	}
+
+	"Remove Mute All"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 全體玩家不再被靜音!"
+	}
+
+	"Leader has been removed"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 當前指揮已被移除!"
+	}
+
+	"The current leader"
+	{
+		"#format"		"{1:N}"
+		"zho"			"{red}[{green}Leader{red}]{default} 當前指揮是 {purple}{1}{default}!"
+	}
+
+	"No current leader"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 當前沒有指揮!"
+	}
+
+	"This Player is not the current leader"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 此玩家不是當前指揮!"
+	}
+
+	"Leader has been removed!"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 當前指揮已被移除!"
+	}
+
+	"The new leader"
+	{
+		"#format"		"{1:N}"
+		"zho"			"{red}[{green}Leader{red}] {purple}{1}{default} 現在是新指揮!"
+	}
+
+	"You are now the leader"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 你現在是指揮! 打字輸入 !leader 開啟指揮菜單."
+	}
+
+	"The target has to be alive"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 目標玩家必須存活!"
+	}
+
+	"Usage sm_leader"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 用法: sm_leader <可選: client|#userid>"
+	}
+
+	"Resigned from being leader"
+	{
+		"#format"		"{1:N}"
+		"zho"			"{red}[{green}Leader{red}] {purple}{1}{default} 已辭去指揮!"
+	}
+
+	"Sprite removed"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 跟蹤標記已移除."
+	}
+
+	"Sprite changed to Defend Here"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 跟蹤標記改為 '{purple}守住這裡{default}'."
+	}
+
+	"Sprite changed to Follow Me"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 跟蹤標記改為 '{purple}跟隨我{default}'."
+	}
+
+	"Marker removed"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 所有固定標記已移除."
+	}
+
+	"Defend Here marker placed"
+	{
+		"#format"		"{1:i}"
+		"zho"			"{red}[{green}Leader{red}]{default} '守住這裡' 標記已放置 - {purple}{1}{default}."
+	}
+
+	"Zombie Spawn marker placed"
+	{
+		"#format"		"{1:i}"
+		"zho"			"{red}[{green}Leader{red}]{default} '僵屍傳送' 標記已放置 - {purple}{1}{default}."
+	}
+
+	"Generic Arrow marker placed"
+	{
+		"#format"		"{1:i}"
+		"zho"			"{red}[{green}Leader{red}]{default} '箭頭' 標記已放置 - {purple}{1}{default}."
+	}
+
+	"No Doorhug marker placed"
+	{
+		"#format"		"{1:i}"
+		"zho"			"{red}[{green}Leader{red}]{default} '禁止貼門' 標記已放置 - {purple}{1}{default}."
+	}
+
+	"The leader has disconnected"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 指揮已斷開連綫!"
+	}
+
+	"The leader has died"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 指揮已陣亡!"
+	}
+
+	"The leader has been infected"
+	{
+		"zho"			"{red}[{green}Leaderred}]{default} 指揮已被感染!"
+	}
+
+	"Leader Chat"
+	{
+		"#format"		"{1:N},{2:s}"
+		"zho"			"{red}[{green}Leader{red}]{default} {purple}{1}{default}: {purple}{2}{default}"
+	}
+
+	"Voting for leader is disabled"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 當前已禁用指揮投票功能."
+	}
+
+	"There is already a leader"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 當前已有指揮官!"
+	}
+
+	"You ve already voted for this person"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 你已對此玩家投票!"
+	}
+
+	"You have to vote for a human"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 你必須給人類玩家投票!"
+	}
+
+	"You are not a human only humans vote"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 你現在不是人類,只有人類才能投票!"
+	}
+
+	"Has voted for"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"zho"			"{red}[{green}Leader{red}] {purple}{1}{default} 已投票選擇 {purple}{2}{default} 為指揮官 ({purple}{3}{default}/{purple}{4}{default} 票)"
+	}
+
+	"Has voted for Remove"
+	{
+		"#format"		"{1:N},{2:N},{3:i},{4:i}"
+		"zho"			"{red}[{green}Leader{red}] {purple}{1}{default} 已投票移除指揮官 {purple}{2}{default} ({purple}{3}{default}/{purple}{4}{default} 票)"
+	}
+
+	"Has been voted to be the new leader"
+	{
+		"#format"		"{1:N}"
+		"zho"			"{red}[{green}Leader{red}] {purple}{1}{default} 被投票選為新指揮官!"
+	}
+
+	"You are not a human"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 你不是人類!"
+	}
+
+	"Voting to remove leader is disabled"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 當前已禁用移除指揮投票功能."
+	}
+	"Could not spawn marker"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 無法生成標記."
+	}
+}

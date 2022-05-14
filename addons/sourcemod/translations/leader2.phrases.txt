@@ -246,7 +246,6 @@
 		"en"			"{red}[{green}Leader{red}]{default} 'Do Not Doorhug' marker placed - {purple}{1}{default}."
 	}
 
-
 	"The leader has disconnected"
 	{
 		"en"			" {red}[{green}Leader{red}]{default} The leader has disconnected!"
