@@ -5,7 +5,7 @@
 * Test & Compile, SouceMod 1.10.0-6528
 * Sorry for my English.
 
-* Author Anubis.
+* Author Anubis, modified by Oz-Lin
 * Version = 1.2
 
 ### Decription:Zr-Leader-Ultimate
@@ -22,11 +22,12 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 
 * It is now possible to vote to remove the current leader.
 * Possibility to remain leader until the map is changed.
-* Possibility of placing several markers.
+* Possibility of placing several markers. 
 * The leader can mute too many players for a set time
 * The leader can now appoint a helper.
 * The leader and helper can shine through walls.
 * Added cvar to disable plugin. "sm_leader_disable"
+* Calling the leader menu panel no longer blocks radar and money indicator.
 
 ### Server ConVars
 
