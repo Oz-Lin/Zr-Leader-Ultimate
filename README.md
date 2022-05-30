@@ -6,7 +6,7 @@
 * Sorry for my English.
 
 * Author Anubis, modified by Oz-Lin
-* Version = 1.3
+* Version = 1.4
 
 ### Decription:Zr-Leader-Ultimate
 
@@ -29,6 +29,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * Added cvar to disable plugin. "sm_leader_disable"
 * Calling the leader menu panel no longer blocks radar and money indicator.
 * Markers are now spawned at crosshair, not at leader's position.
+* [Leader] Clantag override (Ref: [Entwatch clantag module](https://github.com/darkerz7/CSGO-Plugins/blob/master/EntWatch_DZ/addons/sourcemod/scripting/entwatch/module_clantag.inc))
 
 ### Server ConVars
 

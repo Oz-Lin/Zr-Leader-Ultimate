@@ -113,6 +113,7 @@ public void RemoveLeader(int client)
 	KillBeacon(client);
 	RemoveSkin(client);
 	RemoveMute();
+	RemoveTag(client);
 	if (g_iLeaderClient == client) g_iLeaderClient = -1;
 	if (g_iHelperClient == client) g_iHelperClient = -1;
 	

@@ -29,6 +29,10 @@
  * or <http://www.sourcemod.net/license.php>.
  */
 
+#define MAXSIZECLANTAG 16
+
+char g_sClanTag[MAXPLAYERS+1][MAXSIZECLANTAG];
+
 public Action OnClientSayCommand(int client, const char[] command, const char[] sArgs)
 {
 	if(client >= 1 && IsValidClient(client) && (g_iLeaderClient == client || g_iHelperClient == client))
@@ -47,4 +51,58 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 		}
 	}
 	return Plugin_Continue;
+}
+
+public void OnAllPluginsLoaded()
+{
+	CreateTimer(1.0, Timer_CheckDelay, _, TIMER_REPEAT);
+}
+
+//Get Client ClanTag on Connect
+public void Event_PlayerConnectFull(Event hEvent, const char[] sName, bool bDontBroadcast)
+{
+	int client = GetClientOfUserId(GetEventInt(hEvent, "userid"));
+	
+	CS_GetClientClanTag(client, g_sClanTag[client], MAXSIZECLANTAG);
+}
+
+//Get Client ClanTag on Change
+public void OnClientSettingsChanged(int client)
+{
+	if(IsValidClient(client)) CS_GetClientClanTag(client, g_sClanTag[client], MAXSIZECLANTAG);
+}
+
+public Action Timer_CheckDelay(Handle timer)
+{
+
+	for (int i = 0; i < MaxClients; i++)
+	{
+		if(IsValidClient(i))
+		{
+			CheckTag(i);
+		}
+	}
+}
+
+public void CheckTag(int client)
+{
+	if(IsValidClient(client))
+	{
+		char tag[40];
+		if(Leader_CurrentLeader() == client)
+		{
+			tag = "[Leader]"; //hard-coded this for now
+			CS_SetClientClanTag(client, tag);
+		}
+	}
+}
+
+public void RemoveTag(int client)
+{
+	if(IsValidClient(client))
+	{
+		//char tag[40];
+		//tag = ""; //hard-coded this for now
+		CS_SetClientClanTag(client, g_sClanTag[client]);
+	}
 }
