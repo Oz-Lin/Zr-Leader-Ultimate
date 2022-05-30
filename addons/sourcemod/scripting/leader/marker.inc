@@ -29,6 +29,7 @@
  * or <http://www.sourcemod.net/license.php>.
  */
 
+
 void MarkerMenu(int client)
 {
 	if(!IsValidClient(client))
@@ -255,9 +256,14 @@ public int SpawnMarker(int client, char[] sprite)
 		return -1;
 	}
 
-	float Origin[3];
-	GetClientEyePosition(client, Origin);
-	Origin[2] += 25.0;
+	// float Origin[3];
+	// GetClientEyePosition(client, Origin);
+	// Origin[2] += 25.0;
+
+	if(!SetAimEndPoint(client))
+	{
+		return -1;
+	}
 
 	int Ent = CreateEntityByName("env_sprite");
 	if(!Ent) return -1;
@@ -269,10 +275,51 @@ public int SpawnMarker(int client, char[] sprite)
 	DispatchKeyValue(Ent, "rendermode", "1");
 	DispatchKeyValue(Ent, "rendercolor", "255 255 255");
 	DispatchSpawn(Ent);
-	TeleportEntity(Ent, Origin, NULL_VECTOR, NULL_VECTOR);
+	TeleportEntity(Ent, g_pos, NULL_VECTOR, NULL_VECTOR);
 
 	return Ent;
 }
+
+public bool SetAimEndPoint(int client)
+{
+	float vAngles[3];
+	float vOrigin[3];
+	float vBuffer[3];
+	float vStart[3];
+	float Distance;
+
+	GetClientEyePosition(client, vOrigin);
+	GetClientEyeAngles(client, vAngles);
+
+  //get endpoint for spawn marker
+	Handle trace = TR_TraceRayFilterEx(vOrigin, vAngles, MASK_SHOT, RayType_Infinite, TraceEntityFilterPlayer);
+
+	if(TR_DidHit(trace))
+	{
+  		TR_GetEndPosition(vStart, trace);
+		GetVectorDistance(vOrigin, vStart, false);
+		Distance = -35.0;
+		GetAngleVectors(vAngles, vBuffer, NULL_VECTOR, NULL_VECTOR);
+		g_pos[0] = vStart[0] + (vBuffer[0]*Distance);
+		g_pos[1] = vStart[1] + (vBuffer[1]*Distance);
+		g_pos[2] = vStart[2] + (vBuffer[2]*Distance) + 25.0;
+	}
+	else
+	{
+		CPrintToChat(client, "%t", "Could not spawn marker");
+		CloseHandle(trace);
+		return false;
+	}
+
+	CloseHandle(trace);
+	return true;
+}
+
+public bool TraceEntityFilterPlayer(int entity, int contentsMask)
+{
+	return entity > MaxClients || !entity;
+}
+
 
 public void RemoveMarker(int Marker)
 {

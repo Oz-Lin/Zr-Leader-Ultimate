@@ -38,13 +38,14 @@
 #include <zombiereloaded>
 #include <leader>
 #include <basecomm>
+#include <cstrike>
 
 #pragma newdecls required
 
 #define PLUGIN_NAME           "Leader Ultimate OZIG Edition"
 #define PLUGIN_AUTHOR         "Anubis, modified by Oz_Lin"
 #define PLUGIN_DESCRIPTION    "Allows for a human to be a leader, and give them special functions with it."
-#define PLUGIN_VERSION        "1.2"
+#define PLUGIN_VERSION        "1.3"
 #define PLUGIN_URL            "https://github.com/Oz-Lin"
 
 #include "leader/global"

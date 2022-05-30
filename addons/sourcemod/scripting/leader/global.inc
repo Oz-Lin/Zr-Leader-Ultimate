@@ -91,6 +91,8 @@ int g_iCurrentSprite[MAXPLAYERS+1] = { -1, ... };
 int g_iMarkerEntities[MARKER_ENTITIES+1];
 int g_iMarkerCount[MAXPLAYERS+1] = { 0, ... };
 int g_iRemoveMarker[MAXPLAYERS+1] = { 0, ... };
+float g_pos[3];
+
 //**
 
 /**
