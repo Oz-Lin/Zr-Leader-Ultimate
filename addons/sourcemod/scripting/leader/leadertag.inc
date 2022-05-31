@@ -56,6 +56,7 @@ public Action OnClientSayCommand(int client, const char[] command, const char[] 
 public void OnAllPluginsLoaded()
 {
 	CreateTimer(1.0, Timer_CheckDelay, _, TIMER_REPEAT);
+	HookEventEx("player_connect_full", Event_PlayerConnectFull);
 }
 
 //Get Client ClanTag on Connect
@@ -72,6 +73,17 @@ public void OnClientSettingsChanged(int client)
 	if(IsValidClient(client)) CS_GetClientClanTag(client, g_sClanTag[client], MAXSIZECLANTAG);
 }
 
+//Clear stored ClanTag
+stock void Leader_Clantag_OnClientDisconnect(int Client)
+{
+	FormatEx(g_sClanTag[Client], MAXSIZECLANTAG, "");
+}
+
+stock void Leader_Clantag_Mass_Reset()
+{
+	for(int i = 1; i <= MaxClients; i++) Leader_Clantag_Reset(i);
+}
+
 public Action Timer_CheckDelay(Handle timer)
 {
 
@@ -82,6 +94,7 @@ public Action Timer_CheckDelay(Handle timer)
 			CheckTag(i);
 		}
 	}
+	return Plugin_Continue;
 }
 
 public void CheckTag(int client)
@@ -89,7 +102,7 @@ public void CheckTag(int client)
 	if(IsValidClient(client))
 	{
 		char tag[40];
-		if(Leader_CurrentLeader() == client)
+		if(g_iLeaderClient == client || g_iHelperClient == client) 
 		{
 			tag = "[Leader]"; //hard-coded this for now
 			CS_SetClientClanTag(client, tag);
@@ -97,12 +110,11 @@ public void CheckTag(int client)
 	}
 }
 
-public void RemoveTag(int client)
+
+stock void Leader_Clantag_Reset(int client)
 {
 	if(IsValidClient(client))
 	{
-		//char tag[40];
-		//tag = ""; //hard-coded this for now
 		CS_SetClientClanTag(client, g_sClanTag[client]);
 	}
 }
