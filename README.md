@@ -6,7 +6,7 @@
 * Sorry for my English.
 
 * Author Anubis, modified by Oz-Lin
-* Version = 1.4.1
+* Version = 1.4.2
 
 ### Decription:Zr-Leader-Ultimate
 
@@ -18,7 +18,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * Translation file added, just edit.
 * It is now possible to disable the definition in which admin typed !leader and became a leader automatically.
 
-##New
+## New
 
 * It is now possible to vote to remove the current leader.
 * Possibility to remain leader until the map is changed.
@@ -50,7 +50,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_leader_glow_color - Determines R G B glow colors for Leader\nFormat should be \"R G B\" (with spaces). (Default: "72 96 144")
 
 
-##New
+## New
 
 * sm_leader_remove_leader_votes - Determines whether players can vote for remove leaders. (Default: "1")
 * sm_leader_max_markers - Determines maximum number of markers. Max 20 (Default: "5")
@@ -67,16 +67,19 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_vl - Votes for the specified player to be leader. Required votes is current player count / 10.
 * sm_lmute - Leader mute command.
 
-##New
+## New
 
 * sm_voteremoveleader - Votes to remove the leader. The votes needed are the current player count / 10.
 * sm_vrl - Votes to remove the leader. The votes needed are the current player count / 10.
 
-###Thanks.
+## Shortcuts
+* Double press +lookatweapon (default as F key) twice quickly to call the leader marker menu.
+
+### Thanks.
 
 * AntiTeal - Leader2
 
-#Admin Commands
+# Admin Commands
 * sm_removeleader - Removes the current leader.
 * sm_rl - Removes the current leader.
 

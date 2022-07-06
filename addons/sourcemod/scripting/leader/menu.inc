@@ -36,6 +36,11 @@ void MenuOnCommandsCreate()
 	RegConsoleCmd("sm_l", Command_Leader, "Opens Leader main menu.");
 }
 
+void HookShortcutOnCommandsCreate()
+{
+	AddCommandListener(QuickCommand, "+lookatweapon");
+}
+
 public Action Command_Leader(int client, int args)
 {
 	if(!IsValidClient(client)) return Plugin_Handled;
@@ -120,6 +125,32 @@ public Action Command_Leader(int client, int args)
 		PrintToChat(client, "%t", "No Access");
 	}
 	return Plugin_Handled;
+}
+
+public Action QuickCommand(int client, const char[] command, int argc)
+{
+	if(client == g_iLeaderClient || client == g_iHelperClient)
+	{
+		//if(g_bShortcut[client])
+		//{
+			g_iButtoncount[client]++;
+			CreateTimer(1.2, ResetButtonPressed, client);
+		//}
+
+		if (g_iButtoncount[client] >= 2)
+		{
+			if(client == g_iLeaderClient || client == g_iHelperClient)
+			{
+				MarkerMenu(client);
+			}
+		}
+	}
+	return Plugin_Continue;
+}
+
+public Action ResetButtonPressed(Handle timer, any client)
+{
+	g_iButtoncount[client] = 0;
 }
 
 void LeaderMenu(int client)

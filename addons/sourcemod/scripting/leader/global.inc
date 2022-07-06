@@ -70,6 +70,12 @@ char g_sClientNames[MAXPLAYERS+1][MAX_NAME_LENGTH];
 //char g_sLeaderTag[LENGTH_MED_TEXT];
 
 /**
+ * Global button count.
+ */
+ int g_iButtoncount[MAXPLAYERS+1] = 0;
+//**
+
+/**
  * Global Votes.
  */
 int g_iVoteCount[MAXPLAYERS+1];

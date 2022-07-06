@@ -35,4 +35,5 @@ void CommandsInit()
 	MenuOnCommandsCreate();
 	LeaderManegerOnCommandsCreate();
 	MuteOnCommandsCreate();
+	HookShortcutOnCommandsCreate();
 }
