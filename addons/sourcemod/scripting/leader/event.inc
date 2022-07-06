@@ -76,11 +76,17 @@ public int ZR_OnClientInfected(int client, int attacker, bool motherInfect, bool
 	if(client == g_iLeaderClient)
 	{
 		CPrintToChatAll("%t", "The leader has been infected");
-		RemoveLeader(client);
+		if(g_bRemoveOnDie)
+		{
+			RemoveLeader(client);
+		}
 	}
 	else if(client == g_iHelperClient)
 	{
 		CPrintToChatAll("%t", "The leader has been infected");
-		RemoveLeader(client);
+		if(g_bRemoveOnDie)
+		{
+			RemoveLeader(client);
+		}
 	}	
 }

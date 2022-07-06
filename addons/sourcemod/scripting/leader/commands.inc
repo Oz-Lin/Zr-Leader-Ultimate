@@ -33,7 +33,7 @@ void CommandsInit()
 {
 	VotesOnCommandsCreate();
 	MenuOnCommandsCreate();
-	LeaderManegerOnCommandsCreate();
+	LeaderManagerOnCommandsCreate();
 	MuteOnCommandsCreate();
 	HookShortcutOnCommandsCreate();
 }

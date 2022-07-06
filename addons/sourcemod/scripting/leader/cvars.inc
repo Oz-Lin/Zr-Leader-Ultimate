@@ -48,8 +48,9 @@ ConVar CVAR_ROUND_END_RELEADER = null;
 ConVar CVAR_TIMER_REMOVE_MUTE = null;
 ConVar CVAR_GLOW_COLOR = null;
 ConVar CVAR_SV_FORCE_TRANSMIT_PLAYERS = null;
-ConVar CVAR_MP_MAXMONEY = null;
-ConVar CVAR_SV_DISABLE_RADAR = null;
+ConVar CVAR_REMOVE_LEADER_ON_DEATH = null;
+//ConVar CVAR_MP_MAXMONEY = null;  // not in use
+//ConVar CVAR_SV_DISABLE_RADAR = null; // not in use
 
 void CvarsInit()
 {
@@ -82,6 +83,7 @@ void CvarsCreate()
 	CVAR_ROUND_END_RELEADER = CreateConVar("sm_leader_roundend_rleader", "1", "Determine whether to remove the leader at the end of the round.");
 	CVAR_TIMER_REMOVE_MUTE = CreateConVar("sm_leader_timer_removemute", "15.0", "Determine how long the players were speechless after applying the Mute All (Avoid cheating leader).");
 	CVAR_GLOW_COLOR = CreateConVar("sm_leader_glow_color", "72 96 144", "Determines R G B glow colors for Leader\nFormat should be \"R G B\" (with spaces).");
+	CVAR_REMOVE_LEADER_ON_DEATH = CreateConVar("sm_leader_remove_on_die", "1", "Determine whether to remove the leader if leader get infected or died.");
 
 	CVAR_DISABLE.AddChangeHook(ConVarChange);
 	CVAR_VDEFEND_VTF.AddChangeHook(ConVarChange);
@@ -101,6 +103,7 @@ void CvarsCreate()
 	CVAR_ROUND_END_RELEADER.AddChangeHook(ConVarChange);
 	CVAR_TIMER_REMOVE_MUTE.AddChangeHook(ConVarChange);
 	CVAR_GLOW_COLOR.AddChangeHook(ConVarChange);
+	CVAR_REMOVE_LEADER_ON_DEATH.AddChangeHook(ConVarChange);
 
 	AutoExecConfig(true, "leader_ultimate");
 
@@ -131,6 +134,7 @@ public void GetConVars()
 	g_eCvarsList.g_iCVAR_MAX_MARKER = CVAR_MAX_MARKER.IntValue;
 	g_eCvarsList.g_bCVAR_ROUND_END_RELEADER = CVAR_ROUND_END_RELEADER.BoolValue;
 	g_eCvarsList.g_fCVAR_TIMER_REMOVE_MUTE = CVAR_TIMER_REMOVE_MUTE.FloatValue;
+	g_eCvarsList.g_bCVAR_REMOVE_LEADER_ON_DEATH = CVAR_REMOVE_LEADER_ON_DEATH.BoolValue;
 	CVAR_GLOW_COLOR.GetString(g_eCvarsList.g_sCVAR_GLOW_COLOR, sizeof(g_eCvarsList.g_sCVAR_GLOW_COLOR));
 	ColorStringToArray(g_eCvarsList.g_sCVAR_GLOW_COLOR, g_iColorsGlow);
 }

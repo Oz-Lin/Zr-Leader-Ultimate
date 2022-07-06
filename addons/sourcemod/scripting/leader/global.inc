@@ -57,6 +57,7 @@ enum struct CvarsList
 	bool g_bCVAR_ROUND_END_RELEADER;
 	float g_fCVAR_TIMER_REMOVE_MUTE;
 	char g_sCVAR_GLOW_COLOR[LENGTH_MED_TEXT];
+	bool g_bCVAR_REMOVE_LEADER_ON_DEATH;
 	//char g_sCVAR_VALUE_MP_MAXMONEY[LENGTH_MIN_TEXT];
 	//char g_sCVAR_VALUE_SV_DISABLE_RADAR[LENGTH_MIN_TEXT];
 }
@@ -73,6 +74,18 @@ char g_sClientNames[MAXPLAYERS+1][MAX_NAME_LENGTH];
  * Global button count.
  */
  int g_iButtoncount[MAXPLAYERS+1] = 0;
+//**
+
+/**
+ * Global shortcut preference. (Not in use)
+ */
+//bool g_bShortcut[MAXPLAYERS+1];
+//**
+
+/**
+ * Global remove on death.
+ */
+bool g_bRemoveOnDie;
 //**
 
 /**

@@ -29,7 +29,7 @@
  * or <http://www.sourcemod.net/license.php>.
  */
 
-void LeaderManegerOnCommandsCreate()
+void LeaderManagerOnCommandsCreate()
 {
 	RegConsoleCmd("sm_currentleader", CurrentLeader);
 	RegConsoleCmd("sm_cl", CurrentLeader);
@@ -162,12 +162,18 @@ public void LeaderManagerEventPlayerDeath(int client)
 	if(client == g_iLeaderClient)
 	{
 		CPrintToChatAll("%t", "The leader has died");
-		RemoveLeader(client);
+		if(g_bRemoveOnDie)
+		{
+			RemoveLeader(client);
+		}
 	}
 	else if(client == g_iHelperClient)
 	{
 		CPrintToChatAll("%t", "The leader has died");
-		RemoveLeader(client);
+		if(g_bRemoveOnDie)
+		{
+			RemoveLeader(client);
+		}
 	}
 }
 
