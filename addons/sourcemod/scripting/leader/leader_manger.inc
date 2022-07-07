@@ -36,7 +36,7 @@ void LeaderManagerOnCommandsCreate()
 	RegAdminCmd("sm_removeleader", RemoveTheLeader, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_rl", RemoveTheLeader, ADMFLAG_GENERIC);
 	RegConsoleCmd("+sm_leader_laser", Command_LeaderLaserOn, "+sm_leader_laser - Draw a laser");
-    RegConsoleCmd("-sm_leader_laser", Command_LeaderLaserOff, "-sm_leader_laser - Draw a laser");
+	RegConsoleCmd("-sm_leader_laser", Command_LeaderLaserOff, "-sm_leader_laser - Draw a laser");
 }
 
 public void SetLeader(int client)

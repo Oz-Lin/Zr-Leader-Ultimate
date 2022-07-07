@@ -36,7 +36,7 @@ void LaserOnMapStart()
     CreateTimer(0.1, Timer_RenderLeaderLasers, _, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
 }
 
-void LaserOnClientPutInServer(client)
+public void LaserOnClientPutInServer(int client)
 {
     g_bLaserEnabled[client] = false;
 
@@ -127,7 +127,7 @@ public Action Command_Laser(const int client, const int args) {
  */
 public Action Command_LeaderLaserOn(const int client, const int args) {
     // Check if the client is invalid.
-    if (!IsClientValid(client)) {
+    if (!IsValidClient(client)) {
         return Plugin_Handled;
     }
 
@@ -154,7 +154,7 @@ public Action Command_LeaderLaserOn(const int client, const int args) {
  */
 public Action Command_LeaderLaserOff(const int client, const int args) {
     // Check if the client is invalid.
-    if (!IsClientValid(client)) {
+    if (!IsValidClient(client)) {
         return Plugin_Handled;
     }
 
@@ -181,21 +181,21 @@ public Action Command_LeaderLaserOff(const int client, const int args) {
 
 public void Laser(float start[3], float end[3], int color[4]) {
     // Render the laser.
-    TE_SetupBeamPoints(start, end, g_iLaserSprite, 0, 0, 0, g_cvRemoveDelay.FloatValue, 2.0, 2.0, 1, 0.0, color, 0);
+    TE_SetupBeamPoints(start, end, g_iLaserSprite, 0, 0, 0, g_eCvarsList.g_fCVAR_LEADER_LASER_REMOVE_DELAY, 2.0, 2.0, 1, 0.0, color, 0);
 
     // Loop through all players.
     int clients[MAXPLAYERS + 1];
     int clientCount = 0;
     for (int client = 1; client <= MaxClients; client++) {
         // Check if the client is invalid.
-        if (!IsClientValid(client)) {
+        if (!IsValidClient(client)) {
             continue;
         }
 
-        // Check if the client has hidden lasers.
-        if (g_bLaserHidden[client]) {
-            continue;
-        }
+        // Check if the client has hidden lasers. NOT IN USE
+        //if (g_bLaserHidden[client]) {
+        //    continue;
+        //}
 
         // Add the client to the list of clients to send the laser to.
         clients[clientCount] = client;

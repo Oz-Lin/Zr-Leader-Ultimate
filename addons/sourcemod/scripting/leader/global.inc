@@ -157,7 +157,7 @@ int g_iLaserSprite;
 // Aqua  : 0, 156, 254, 255
 // Blue  : 0, 0, 132, 255
 // Purple: 44, 0, 156, 255
-char g_cLaserColours[5][16] = { "Red",              "Yellow",             "Green",            "Blue",             "White" };
+// char g_cLaserColours[5][16] = { "Red",              "Yellow",             "Green",            "Blue",             "White" };
 int  g_iLaserColours[5][4] =  { { 222, 0, 0, 255 }, { 254, 246, 0, 255 }, { 0, 188, 0, 255 }, { 0, 0, 132, 255 }, { 255, 255, 255, 255 } };
 
 bool  g_bLaserEnabled[MAXPLAYERS + 1];

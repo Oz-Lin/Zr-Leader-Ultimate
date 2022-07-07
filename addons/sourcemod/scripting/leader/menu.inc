@@ -133,8 +133,8 @@ public Action QuickCommand(int client, const char[] command, int argc)
 	{
 		//if(g_bShortcut[client])
 		//{
-			g_iButtoncount[client]++;
-			CreateTimer(1.2, ResetButtonPressed, client);
+		g_iButtoncount[client]++;
+		CreateTimer(1.2, ResetButtonPressed, client);
 		//}
 
 		if (g_iButtoncount[client] >= 2)
