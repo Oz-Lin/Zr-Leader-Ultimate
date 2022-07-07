@@ -30,6 +30,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * Calling the leader menu panel no longer blocks radar and money indicator.
 * Markers are now spawned at crosshair, not at leader's position.
 * [Leader] Clantag override for both leader and helper (Ref: [Entwatch clantag module](https://github.com/darkerz7/CSGO-Plugins/blob/master/EntWatch_DZ/addons/sourcemod/scripting/entwatch/module_clantag.inc))
+* Shortcut to call the marker menu panel directly.
 
 ### Server ConVars
 
@@ -48,14 +49,13 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_leader_admin_leader - Determines whether Admin can access menu leader, without voting. (Default: "1")
 * sm_leader_timer_removemute - Determine how long the players were speechless after applying the Mute All (Avoid cheating leader). (Default: "15.0")
 * sm_leader_glow_color - Determines R G B glow colors for Leader\nFormat should be \"R G B\" (with spaces). (Default: "72 96 144")
-* sm_leader_remove_on_die - Determine whether to remove the leader if leader get infected or died. (Default: "1")
 
 ## New
 
 * sm_leader_remove_leader_votes - Determines whether players can vote for remove leaders. (Default: "1")
 * sm_leader_max_markers - Determines maximum number of markers. Max 20 (Default: "5")
 * sm_leader_roundend_rleader - Determine whether to remove the leader at the end of the round. (Default: "1")
-
+* sm_leader_remove_on_die - Determine whether to remove the leader if leader get infected or died. (Default: "1")
 
 ### Commands
 
@@ -79,6 +79,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 ### Thanks.
 
 * AntiTeal - Leader2
+* darkerz7 - Clantag module
 
 # Admin Commands
 * sm_removeleader - Removes the current leader.
