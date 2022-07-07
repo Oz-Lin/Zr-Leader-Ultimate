@@ -325,7 +325,7 @@
 	}
 	"Draw Leader Laser"
 	{
-		"chi"			"{red}[{green}Leader{red}]{default} 劃綫提示 (+sm_leader_laser)"
+		"chi"			"劃綫提示 (+sm_leader_laser)"
 	}
 	"How to bind key for leader laser"
 	{
