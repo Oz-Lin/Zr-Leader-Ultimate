@@ -35,6 +35,8 @@ void LeaderManagerOnCommandsCreate()
 	RegConsoleCmd("sm_cl", CurrentLeader);
 	RegAdminCmd("sm_removeleader", RemoveTheLeader, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_rl", RemoveTheLeader, ADMFLAG_GENERIC);
+	RegConsoleCmd("+sm_leader_laser", Command_LeaderLaserOn, "+sm_leader_laser - Draw a laser");
+    RegConsoleCmd("-sm_leader_laser", Command_LeaderLaserOff, "-sm_leader_laser - Draw a laser");
 }
 
 public void SetLeader(int client)
@@ -162,6 +164,8 @@ public void LeaderManagerEventPlayerDeath(int client)
 	if(client == g_iLeaderClient)
 	{
 		CPrintToChatAll("%t", "The leader has died");
+		g_bLaserEnabled[client] = false;
+
 		if(g_bRemoveOnDie)
 		{
 			RemoveLeader(client);
@@ -170,6 +174,8 @@ public void LeaderManagerEventPlayerDeath(int client)
 	else if(client == g_iHelperClient)
 	{
 		CPrintToChatAll("%t", "The leader has died");
+		g_bLaserEnabled[client] = false;
+
 		if(g_bRemoveOnDie)
 		{
 			RemoveLeader(client);

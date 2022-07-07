@@ -40,6 +40,8 @@ ConVar CVAR_VARROW_VTF = null;
 ConVar CVAR_VARROW_VMT = null;
 ConVar CVAR_VNODOORHUG_VTF = null;
 ConVar CVAR_VNODOORHUG_VMT = null;
+ConVar CVAR_VLASERBEAM_VTF = null;
+ConVar CVAR_VLASERBEAM_VMT = null;
 ConVar CVAR_ALLOW_VOTING = null;
 ConVar CVAR_ALLOW_RL_VOTING = null;
 ConVar CVAR_ALLOW_ADMIN_LEADER = null;
@@ -49,6 +51,7 @@ ConVar CVAR_TIMER_REMOVE_MUTE = null;
 ConVar CVAR_GLOW_COLOR = null;
 ConVar CVAR_SV_FORCE_TRANSMIT_PLAYERS = null;
 ConVar CVAR_REMOVE_LEADER_ON_DEATH = null;
+ConVar CVAR_LEADER_LASER_REMOVE_DELAY = null;
 //ConVar CVAR_MP_MAXMONEY = null;  // not in use
 //ConVar CVAR_SV_DISABLE_RADAR = null; // not in use
 
@@ -76,6 +79,8 @@ void CvarsCreate()
 	CVAR_VARROW_VTF = CreateConVar("sm_generic_arrow_vtf", "materials/gfl/marker.vtf", "The generic arrow .vtf file");
 	CVAR_VNODOORHUG_VMT = CreateConVar("sm_no_doorhug_vmt", "materials/sg/nodoorhug.vmt", "The no doorhug .vmt file");
 	CVAR_VNODOORHUG_VTF = CreateConVar("sm_no_doorhug_vtf", "materials/sg/nodoorhug.vtf", "The no doorhug .vtf file");
+	CVAR_VLASERBEAM_VMT = CreateConVar("sm_leader_laser_vmt", "materials/sprites/laserbeam.vmt", "The leader laser .vmt file");
+	CVAR_VLASERBEAM_VTF = CreateConVar("sm_leader_laser_vtf", "materials/sprites/laserbeam.vtf", "The leader laser .vtf file");
 	CVAR_ALLOW_VOTING = CreateConVar("sm_leader_allow_votes", "1", "Determines whether players can vote for leaders.");
 	CVAR_ALLOW_RL_VOTING = CreateConVar("sm_leader_remove_leader_votes", "1", "Determines whether players can vote for remove leaders.");
 	CVAR_ALLOW_ADMIN_LEADER = CreateConVar("sm_leader_admin_leader", "1", "Determines whether Admin can access menu leader, without voting.");
@@ -84,6 +89,7 @@ void CvarsCreate()
 	CVAR_TIMER_REMOVE_MUTE = CreateConVar("sm_leader_timer_removemute", "15.0", "Determine how long the players were speechless after applying the Mute All (Avoid cheating leader).");
 	CVAR_GLOW_COLOR = CreateConVar("sm_leader_glow_color", "72 96 144", "Determines R G B glow colors for Leader\nFormat should be \"R G B\" (with spaces).");
 	CVAR_REMOVE_LEADER_ON_DEATH = CreateConVar("sm_leader_remove_on_die", "1", "Determine whether to remove the leader if leader get infected or died.");
+	CVAR_LEADER_LASER_REMOVE_DELAY = CreateConVar("sm_leader_lasers_removedelay", "60.0", "Determine how long the leader laser (in seconds) should be visible before they get removed.", _, true, 5.0, true, 300.0);
 
 	CVAR_DISABLE.AddChangeHook(ConVarChange);
 	CVAR_VDEFEND_VTF.AddChangeHook(ConVarChange);
@@ -96,6 +102,8 @@ void CvarsCreate()
 	CVAR_VARROW_VMT.AddChangeHook(ConVarChange);
 	CVAR_VNODOORHUG_VTF.AddChangeHook(ConVarChange);
 	CVAR_VNODOORHUG_VMT.AddChangeHook(ConVarChange);
+	CVAR_VLASERBEAM_VTF.AddChangeHook(ConVarChange);
+	CVAR_VLASERBEAM_VMT.AddChangeHook(ConVarChange);
 	CVAR_ALLOW_VOTING.AddChangeHook(ConVarChange);
 	CVAR_ALLOW_RL_VOTING.AddChangeHook(ConVarChange);
 	CVAR_ALLOW_ADMIN_LEADER.AddChangeHook(ConVarChange);
@@ -104,6 +112,7 @@ void CvarsCreate()
 	CVAR_TIMER_REMOVE_MUTE.AddChangeHook(ConVarChange);
 	CVAR_GLOW_COLOR.AddChangeHook(ConVarChange);
 	CVAR_REMOVE_LEADER_ON_DEATH.AddChangeHook(ConVarChange);
+	CVAR_LEADER_LASER_REMOVE_DELAY.AddChangeHook(ConVarChange);
 
 	AutoExecConfig(true, "leader_ultimate");
 
@@ -128,6 +137,8 @@ public void GetConVars()
 	CVAR_VARROW_VMT.GetString(g_eCvarsList.g_sCVAR_VARROW_VMT, sizeof(g_eCvarsList.g_sCVAR_VARROW_VMT));
 	CVAR_VNODOORHUG_VTF.GetString(g_eCvarsList.g_sCVAR_VNODOORHUG_VTF, sizeof(g_eCvarsList.g_sCVAR_VNODOORHUG_VTF));
 	CVAR_VNODOORHUG_VMT.GetString(g_eCvarsList.g_sCVAR_VNODOORHUG_VMT, sizeof(g_eCvarsList.g_sCVAR_VNODOORHUG_VMT));
+	CVAR_VLASERBEAM_VTF.GetString(g_eCvarsList.g_sCVAR_VLASERBEAM_VTF, sizeof(g_eCvarsList.g_sCVAR_VLASERBEAM_VTF));
+	CVAR_VLASERBEAM_VMT.GetString(g_eCvarsList.g_sCVAR_VLASERBEAM_VMT, sizeof(g_eCvarsList.g_sCVAR_VLASERBEAM_VMT));
 	g_eCvarsList.g_bCVAR_ALLOW_VOTING = CVAR_ALLOW_VOTING.BoolValue;
 	g_eCvarsList.g_bCVAR_ALLOW_RL_VOTING = CVAR_ALLOW_RL_VOTING.BoolValue;
 	g_eCvarsList.g_bCVAR_ALLOW_ADMIN_LEADER = CVAR_ALLOW_ADMIN_LEADER.BoolValue;
@@ -135,6 +146,7 @@ public void GetConVars()
 	g_eCvarsList.g_bCVAR_ROUND_END_RELEADER = CVAR_ROUND_END_RELEADER.BoolValue;
 	g_eCvarsList.g_fCVAR_TIMER_REMOVE_MUTE = CVAR_TIMER_REMOVE_MUTE.FloatValue;
 	g_eCvarsList.g_bCVAR_REMOVE_LEADER_ON_DEATH = CVAR_REMOVE_LEADER_ON_DEATH.BoolValue;
+	g_eCvarsList.g_fCVAR_LEADER_LASER_REMOVE_DELAY = CVAR_LEADER_LASER_REMOVE_DELAY.FloatValue;
 	CVAR_GLOW_COLOR.GetString(g_eCvarsList.g_sCVAR_GLOW_COLOR, sizeof(g_eCvarsList.g_sCVAR_GLOW_COLOR));
 	ColorStringToArray(g_eCvarsList.g_sCVAR_GLOW_COLOR, g_iColorsGlow);
 }

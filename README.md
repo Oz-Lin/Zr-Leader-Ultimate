@@ -6,7 +6,7 @@
 * Sorry for my English.
 
 * Author Anubis, modified by Oz-Lin
-* Version = 1.4.3
+* Version = 1.5.0
 
 ### Decription:Zr-Leader-Ultimate
 
@@ -31,6 +31,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * Markers are now spawned at crosshair, not at leader's position.
 * [Leader] Clantag override for both leader and helper (Ref: [Entwatch clantag module](https://github.com/darkerz7/CSGO-Plugins/blob/master/EntWatch_DZ/addons/sourcemod/scripting/entwatch/module_clantag.inc))
 * Shortcut to call the marker menu panel directly.
+* "Draw leader laser" utility (Ref: [Lasers](https://github.com/matthewpi/lasers))
 
 ### Server ConVars
 
@@ -56,6 +57,9 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_leader_max_markers - Determines maximum number of markers. Max 20 (Default: "5")
 * sm_leader_roundend_rleader - Determine whether to remove the leader at the end of the round. (Default: "1")
 * sm_leader_remove_on_die - Determine whether to remove the leader if leader get infected or died. (Default: "1")
+* sm_leader_laser_vmt - The leader laser .vmt file (Default: "materials/sprites/laserbeam.vtf")
+* sm_leader_laser_vtf - The leader laser .vtf file (Default: "materials/sprites/laserbeam.vtf")
+* sm_leader_lasers_removedelay - Determine how long the leader laser (in seconds) should be visible before they get removed. (Default: "60", Minimum: "5.0", Maximum: "300.0")
 
 ### Commands
 
@@ -72,6 +76,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 
 * sm_voteremoveleader - Votes to remove the leader. The votes needed are the current player count / 10.
 * sm_vrl - Votes to remove the leader. The votes needed are the current player count / 10.
+* +sm_leader_laser - Leader draw laser command (Need to bind a key on the game console manually).
 
 ## Shortcuts
 * Double press +lookatweapon (default as F key) twice quickly to call the leader marker menu.
@@ -80,6 +85,7 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 
 * AntiTeal - Leader2
 * darkerz7 - Clantag module
+* matthewpi - Lasers
 
 # Admin Commands
 * sm_removeleader - Removes the current leader.

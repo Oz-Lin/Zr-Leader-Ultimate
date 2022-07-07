@@ -317,7 +317,7 @@ public bool SetAimEndPoint(int client)
 
 public bool TraceEntityFilterPlayer(int entity, int contentsMask)
 {
-	return entity > MaxClients || !entity;
+	return (entity > MaxClients || !entity);
 }
 
 

@@ -183,6 +183,7 @@ void LeaderMenu(int client)
 	char s_TBMute[LENGTH_MED_TEXT];
 	char s_THelper[LENGTH_MED_TEXT];
 	char s_Resign[LENGTH_MED_TEXT];
+	char s_LeaderLaser[LENGTH_MED_TEXT];
 
 	switch (g_iCurrentSprite[client])
 	{
@@ -221,6 +222,7 @@ void LeaderMenu(int client)
 	Format(s_Muteall, sizeof(s_Muteall), "%t", "Toggle Mute");
 	Format(s_SelectHelper, sizeof(s_SelectHelper), "%t", "Select Helper");
 	Format(s_Resign, sizeof(s_Resign), "%t", "Resign from Leader");
+	Format(s_LeaderLaser, sizeof(s_LeaderLaser), "%t", "Draw Leader Laser");
 
 	m_LeaderMenu.SetTitle(s_Title);
 	m_LeaderMenu.AddItem("m_sprite", s_Sprite);
@@ -231,6 +233,7 @@ void LeaderMenu(int client)
 	if (g_iLeaderClient == client && !IsValidClient(g_iHelperClient)) m_LeaderMenu.AddItem("m_selecthelper", s_SelectHelper);
 	if (IsValidClient(g_iHelperClient)) m_LeaderMenu.AddItem("m_removehelper", s_SRemoveHelper);
 	m_LeaderMenu.AddItem("m_resign", s_Resign);
+	m_LeaderMenu.AddItem("m_leaderlaser", s_LeaderLaser);
 
 	m_LeaderMenu.ExitButton = true;
 
@@ -289,6 +292,11 @@ public int LeaderMenu_Handler(Handle m_LeaderMenu, MenuAction action, int client
 				RemoveLeader(client);
 				CPrintToChatAll("%t", "Resigned from being leader", client);
 				action = MenuAction_Cancel;
+			}
+			if(StrEqual(info, "m_leaderlaser"))
+			{
+				CPrintToChat(client, "%t", "How to bind key for leader laser");
+				LeaderMenu(client);
 			}
 		}
 		if (itemNum == MenuCancel_ExitBack)
