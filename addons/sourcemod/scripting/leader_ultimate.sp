@@ -45,7 +45,7 @@
 #define PLUGIN_NAME           "Leader Ultimate OZIG Edition"
 #define PLUGIN_AUTHOR         "Anubis, modified by Oz_Lin"
 #define PLUGIN_DESCRIPTION    "Allows for a human to be a leader, and give them special functions with it."
-#define PLUGIN_VERSION        "1.4.1"
+#define PLUGIN_VERSION        "1.5.1"
 #define PLUGIN_URL            "https://github.com/Oz-Lin"
 
 #include "leader/global"
@@ -63,6 +63,7 @@
 #include "leader/beacon"
 #include "leader/mute"
 #include "leader/leadertag"
+#include "leader/laser"
 #include "leader/api"
 
 public Plugin myinfo =
@@ -94,11 +95,13 @@ public void OnMapStart()
 {
 	VotesOnMapEndStart();
 	DownloadsLoad();
+	LaserOnMapStart();
 }
 
 public void OnClientPutInServer(int client)
 {
 	MuteOnClientPutInServer(client);
+	LaserOnClientPutInServer(client);
 }
 
 public void OnClientDisconnect(int client)

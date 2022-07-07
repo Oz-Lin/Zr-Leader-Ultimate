@@ -29,12 +29,14 @@
  * or <http://www.sourcemod.net/license.php>.
  */
 
-void LeaderManegerOnCommandsCreate()
+void LeaderManagerOnCommandsCreate()
 {
 	RegConsoleCmd("sm_currentleader", CurrentLeader);
 	RegConsoleCmd("sm_cl", CurrentLeader);
 	RegAdminCmd("sm_removeleader", RemoveTheLeader, ADMFLAG_GENERIC);
 	RegAdminCmd("sm_rl", RemoveTheLeader, ADMFLAG_GENERIC);
+	RegConsoleCmd("+sm_leader_laser", Command_LeaderLaserOn, "+sm_leader_laser - Draw a laser");
+	RegConsoleCmd("-sm_leader_laser", Command_LeaderLaserOff, "-sm_leader_laser - Draw a laser");
 }
 
 public void SetLeader(int client)
@@ -162,12 +164,22 @@ public void LeaderManagerEventPlayerDeath(int client)
 	if(client == g_iLeaderClient)
 	{
 		CPrintToChatAll("%t", "The leader has died");
-		RemoveLeader(client);
+		g_bLaserEnabled[client] = false;
+
+		if(g_bRemoveOnDie)
+		{
+			RemoveLeader(client);
+		}
 	}
 	else if(client == g_iHelperClient)
 	{
 		CPrintToChatAll("%t", "The leader has died");
-		RemoveLeader(client);
+		g_bLaserEnabled[client] = false;
+
+		if(g_bRemoveOnDie)
+		{
+			RemoveLeader(client);
+		}
 	}
 }
 

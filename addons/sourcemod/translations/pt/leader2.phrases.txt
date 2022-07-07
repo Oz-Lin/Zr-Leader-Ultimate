@@ -53,7 +53,7 @@
 
 	"Marker Menu"
 	{
-		"pt"			"Menu de Marcas"
+		"pt"			"Menu de Marcas  (Shortcut: FF)"
 	}
 
 	"Toggle Beacon"

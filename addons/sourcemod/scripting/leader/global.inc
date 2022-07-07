@@ -50,6 +50,8 @@ enum struct CvarsList
 	char g_sCVAR_VARROW_VMT[PLATFORM_MAX_PATH];
 	char g_sCVAR_VNODOORHUG_VTF[PLATFORM_MAX_PATH];
 	char g_sCVAR_VNODOORHUG_VMT[PLATFORM_MAX_PATH];
+	//char g_sCVAR_VLASERBEAM_VTF[PLATFORM_MAX_PATH];
+	//char g_sCVAR_VLASERBEAM_VMT[PLATFORM_MAX_PATH];
 	bool g_bCVAR_ALLOW_VOTING;
 	bool g_bCVAR_ALLOW_RL_VOTING;
 	bool g_bCVAR_ALLOW_ADMIN_LEADER;
@@ -57,6 +59,8 @@ enum struct CvarsList
 	bool g_bCVAR_ROUND_END_RELEADER;
 	float g_fCVAR_TIMER_REMOVE_MUTE;
 	char g_sCVAR_GLOW_COLOR[LENGTH_MED_TEXT];
+	bool g_bCVAR_REMOVE_LEADER_ON_DEATH;
+	float g_fCVAR_LEADER_LASER_REMOVE_DELAY;
 	//char g_sCVAR_VALUE_MP_MAXMONEY[LENGTH_MIN_TEXT];
 	//char g_sCVAR_VALUE_SV_DISABLE_RADAR[LENGTH_MIN_TEXT];
 }
@@ -68,6 +72,24 @@ int g_iHelperClient;
 
 char g_sClientNames[MAXPLAYERS+1][MAX_NAME_LENGTH];
 //char g_sLeaderTag[LENGTH_MED_TEXT];
+
+/**
+ * Global button count.
+ */
+ int g_iButtoncount[MAXPLAYERS+1] = 0;
+//**
+
+/**
+ * Global shortcut preference. (Not in use)
+ */
+//bool g_bShortcut[MAXPLAYERS+1];
+//**
+
+/**
+ * Global remove on death.
+ */
+bool g_bRemoveOnDie;
+//**
 
 /**
  * Global Votes.
@@ -118,4 +140,28 @@ int g_iGreyColor[4] = {128, 128, 128, 255};
  */
 bool g_bMuteStatus = false;
 bool g_bMuteClient[MAXPLAYERS+1] = {false, ...};
+//**
+
+/**
+ * Global laser sprite.
+ */
+int g_iLaserSprite;
+
+//char g_cLaserColours[7][16] = {        "White",              "Red",              "Green",             "Blue",              "Yellow",            "Aqua",               "Pink"        };
+//int  g_iLaserColours[7][4] =  { { 255, 255, 255, 255 }, { 255, 0, 0, 255 }, { 0, 255, 0, 255 }, { 0, 0, 255, 255 }, { 255, 255, 0, 255 }, { 0, 255, 255, 255 }, { 255, 0, 255, 255 } };
+
+// Red   : 222, 0, 0, 255
+// Orange: 254, 98, 44, 255
+// Yellow: 254, 246, 0, 255
+// Green : 0, 188, 0, 255
+// Aqua  : 0, 156, 254, 255
+// Blue  : 0, 0, 132, 255
+// Purple: 44, 0, 156, 255
+// char g_cLaserColours[5][16] = { "Red",              "Yellow",             "Green",            "Blue",             "White" };
+int  g_iLaserColours[5][4] =  { { 222, 0, 0, 255 }, { 254, 246, 0, 255 }, { 0, 188, 0, 255 }, { 0, 0, 132, 255 }, { 255, 255, 255, 255 } };
+
+int   g_iLaserColour[MAXPLAYERS + 1];
+int   g_iLeaderLaserColour[MAXPLAYERS + 1];
+bool  g_bLaserEnabled[MAXPLAYERS + 1];
+float g_iLaserHistory[MAXPLAYERS + 1][3];
 //**
