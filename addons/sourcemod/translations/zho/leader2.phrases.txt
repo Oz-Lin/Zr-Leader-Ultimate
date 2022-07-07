@@ -53,7 +53,7 @@
 
 	"Marker Menu"
 	{
-		"zho"			"標記菜單"
+		"zho"			"標記菜單 (捷徑: FF)"
 	}
 
 	"Toggle Beacon"
@@ -322,5 +322,13 @@
 	"Could not spawn marker"
 	{
 		"zho"			"{red}[{green}Leader{red}]{default} 無法生成標記."
+	}
+	"Draw Leader Laser"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 劃綫提示 (+sm_leader_laser)"
+	}
+	"How to bind key for leader laser"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 指揮劃綫需要自行前往控制台绑定按鍵 bind '任意按鍵' +sm_leader_laser 例如: 使用左ALT鍵劃綫：bind alt +sm_leader_laser"
 	}
 }

@@ -53,7 +53,7 @@
 
 	"Marker Menu"
 	{
-		"ru"			"Маркерное меню"
+		"ru"			"Маркерное меню  (Shortcut: FF)"
 	}
 
 	"Toggle Beacon"

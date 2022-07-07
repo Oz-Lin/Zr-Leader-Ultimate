@@ -53,7 +53,7 @@
 
 	"Marker Menu"
 	{
-		"en"			"Marker Menu"
+		"en"			"Marker Menu (Shortcut: FF)"
 	}
 
 	"Toggle Beacon"
@@ -322,5 +322,13 @@
 	"Could not spawn marker"
 	{
 		"en"			"{red}[{green}Leader{red}]{default} Could not spawn marker."
+	}
+	"Draw Leader Laser"
+	{
+		"en"			"{red}[{green}Leader{red}]{default} Draw Leader Laser (+sm_leader_laser)"
+	}
+	"How to bind key for leader laser"
+	{
+		"en"			"{red}[{green}Leader{red}]{default} This utility requires you to bind a key on the game console. e.g. If you want to hold the left ALT key to draw lasers: bind alt +sm_leader_laser"
 	}
 }
