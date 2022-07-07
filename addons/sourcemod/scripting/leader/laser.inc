@@ -32,6 +32,8 @@
 
 void LaserOnMapStart()
 {
+    //g_iLaserSprite = PrecacheModel(FindConVar ("sm_leader_laser_vmt"),true); //PrecacheModel("materials/sprites/laserbeam.vmt");
+    g_iLaserSprite = PrecacheModel("materials/sprites/laserbeam.vmt"); // WTF, not on download table
     // Timers
     CreateTimer(0.1, Timer_RenderLeaderLasers, _, TIMER_REPEAT|TIMER_FLAG_NO_MAPCHANGE);
 }
@@ -39,6 +41,8 @@ void LaserOnMapStart()
 public void LaserOnClientPutInServer(int client)
 {
     g_bLaserEnabled[client] = false;
+    g_iLaserColour[client] = -1;
+    g_iLeaderLaserColour[client] = 0;
 
     for (int i = 0; i < 3; i++) 
     {
@@ -77,9 +81,9 @@ public Action Timer_RenderLeaderLasers(Handle timer) {
         TraceEye(client, position);
 
         // Check if the drawing distance of the laser is too far away.
-        if (GetVectorDistance(position, standingPosition) > 1500.0) {
+        if (GetVectorDistance(position, standingPosition) > 2500.0) {
             // Reset the laser history to prevent lasers from being drawn
-            // even if g_iLaserHistory is outside of the 1500.0 unit limit.
+            // even if g_iLaserHistory is outside of the 2500.0 unit limit.
             for (int i = 0; i < 3; i++) {
                 g_iLaserHistory[client][i] = 0.0;
             }
@@ -88,9 +92,22 @@ public Action Timer_RenderLeaderLasers(Handle timer) {
 
         // Check if the laser distance is more than 6.0 units.
         if (GetVectorDistance(position, g_iLaserHistory[client]) > 6.0) {
+            // Get the client's set laser colour.
+            color = g_iLaserColour[client];
+
+            // Check if the user is using the rainbow color.
+            if (color == -1) {
+                color = g_iLeaderLaserColour[client];
+                g_iLeaderLaserColour[client] = color + 1;
+
+                // Loop through 5 colours.
+                if (g_iLeaderLaserColour[client] > 4) {
+                    g_iLeaderLaserColour[client] = 0;
+                }
+            }
 
             // Render the laser.
-            Laser(g_iLaserHistory[client], position, g_iLaserColours[color]);
+            LeaderLaser(g_iLaserHistory[client], position, g_iLaserColours[color]);
 
             // Update the laser history array.
             for (int i = 0; i < 3; i++) {
@@ -179,8 +196,9 @@ public Action Command_LeaderLaserOff(const int client, const int args) {
     return Plugin_Handled;
 }
 
-public void Laser(float start[3], float end[3], int color[4]) {
+public void LeaderLaser(float start[3], float end[3], int color[4]) {
     // Render the laser.
+    //TE_SetupBeamPoints(start, end, CVAR_VLASERBEAM_VMT.GetString(g_eCvarsList.g_sCVAR_VLASERBEAM_VMT, sizeof(g_eCvarsList.g_sCVAR_VLASERBEAM_VMT)), 0, 0, 0, g_eCvarsList.g_fCVAR_LEADER_LASER_REMOVE_DELAY, 2.0, 2.0, 1, 0.0, color, 0);
     TE_SetupBeamPoints(start, end, g_iLaserSprite, 0, 0, 0, g_eCvarsList.g_fCVAR_LEADER_LASER_REMOVE_DELAY, 2.0, 2.0, 1, 0.0, color, 0);
 
     // Loop through all players.

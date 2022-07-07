@@ -41,8 +41,8 @@ void DownloadsLoad()
 	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VARROW_VMT);
 	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VNODOORHUG_VTF);
 	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VNODOORHUG_VMT);
-	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VLASERBEAM_VTF);
-	AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VLASERBEAM_VMT);
+	//AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VLASERBEAM_VTF); Already built in the game
+	//AddFileToDownloadsTable(g_eCvarsList.g_sCVAR_VLASERBEAM_VMT);
 
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VDEFEND_VTF, true);
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VDEFEND_VMT, true);
@@ -54,8 +54,8 @@ void DownloadsLoad()
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VARROW_VMT, true);
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VNODOORHUG_VTF, true);
 	PrecacheGeneric(g_eCvarsList.g_sCVAR_VNODOORHUG_VMT, true);
-	PrecacheGeneric(g_eCvarsList.g_sCVAR_VLASERBEAM_VTF, true);
-	PrecacheGeneric(g_eCvarsList.g_sCVAR_VLASERBEAM_VMT, true);
+	// PrecacheGeneric(g_eCvarsList.g_sCVAR_VLASERBEAM_VTF, true);
+	// PrecacheGeneric(g_eCvarsList.g_sCVAR_VLASERBEAM_VMT, true);
 
 	Handle gameConfig = LoadGameConfigFile("funcommands.games");
 	if (gameConfig == null)

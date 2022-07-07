@@ -50,8 +50,8 @@ enum struct CvarsList
 	char g_sCVAR_VARROW_VMT[PLATFORM_MAX_PATH];
 	char g_sCVAR_VNODOORHUG_VTF[PLATFORM_MAX_PATH];
 	char g_sCVAR_VNODOORHUG_VMT[PLATFORM_MAX_PATH];
-	char g_sCVAR_VLASERBEAM_VTF[PLATFORM_MAX_PATH];
-	char g_sCVAR_VLASERBEAM_VMT[PLATFORM_MAX_PATH];
+	//char g_sCVAR_VLASERBEAM_VTF[PLATFORM_MAX_PATH];
+	//char g_sCVAR_VLASERBEAM_VMT[PLATFORM_MAX_PATH];
 	bool g_bCVAR_ALLOW_VOTING;
 	bool g_bCVAR_ALLOW_RL_VOTING;
 	bool g_bCVAR_ALLOW_ADMIN_LEADER;
@@ -160,6 +160,8 @@ int g_iLaserSprite;
 // char g_cLaserColours[5][16] = { "Red",              "Yellow",             "Green",            "Blue",             "White" };
 int  g_iLaserColours[5][4] =  { { 222, 0, 0, 255 }, { 254, 246, 0, 255 }, { 0, 188, 0, 255 }, { 0, 0, 132, 255 }, { 255, 255, 255, 255 } };
 
+int   g_iLaserColour[MAXPLAYERS + 1];
+int   g_iLeaderLaserColour[MAXPLAYERS + 1];
 bool  g_bLaserEnabled[MAXPLAYERS + 1];
 float g_iLaserHistory[MAXPLAYERS + 1][3];
 //**

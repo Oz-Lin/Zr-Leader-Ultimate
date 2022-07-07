@@ -6,7 +6,7 @@
 * Sorry for my English.
 
 * Author Anubis, modified by Oz-Lin
-* Version = 1.5.0
+* Version = 1.5.1
 
 ### Decription:Zr-Leader-Ultimate
 
@@ -57,8 +57,6 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_leader_max_markers - Determines maximum number of markers. Max 20 (Default: "5")
 * sm_leader_roundend_rleader - Determine whether to remove the leader at the end of the round. (Default: "1")
 * sm_leader_remove_on_die - Determine whether to remove the leader if leader get infected or died. (Default: "1")
-* sm_leader_laser_vmt - The leader laser .vmt file (Default: "materials/sprites/laserbeam.vtf")
-* sm_leader_laser_vtf - The leader laser .vtf file (Default: "materials/sprites/laserbeam.vtf")
 * sm_leader_lasers_removedelay - Determine how long the leader laser (in seconds) should be visible before they get removed. (Default: "60", Minimum: "5.0", Maximum: "300.0")
 
 ### Commands
@@ -85,7 +83,8 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 
 * AntiTeal - Leader2
 * darkerz7 - Clantag module
-* matthewpi - Lasers
+* matthewpi - VIP Lasers
+* Chinese CS:GO zombie escape servers - Leader draw laser function
 
 # Admin Commands
 * sm_removeleader - Removes the current leader.
