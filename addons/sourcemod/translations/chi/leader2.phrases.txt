@@ -258,7 +258,7 @@
 
 	"The leader has been infected"
 	{
-		"chi"			"{red}[{green}Leaderred}]{default} 指挥已被感染!"
+		"chi"			"{red}[{green}Leader{red}]{default} 指挥已被感染!"
 	}
 
 	"Leader Chat"

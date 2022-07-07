@@ -258,7 +258,7 @@
 
 	"The leader has been infected"
 	{
-		"en"			" {red}[{green}Leaderred}]{default} The leader has been infected!"
+		"en"			" {red}[{green}Leader{red}]{default} The leader has been infected!"
 	}
 
 	"Leader Chat"
