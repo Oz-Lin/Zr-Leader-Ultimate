@@ -90,9 +90,10 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_removeleader - Removes the current leader.
 * sm_rl - Removes the current leader.
 
-![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img1.jpg)
-![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img2.jpg)
-![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img3.jpg)
-![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img4.jpg)
-![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img5.jpg)
-![alt text](https://raw.githubusercontent.com/Stewart-Anubis/Zr-Leader-Ultimate/main/img/img6.jpg)
+![alt text](https://raw.githubusercontent.com/Oz-Lin/Zr-Leader-Ultimate/main/img/20220708174300_1.jpg)
+![alt text](https://raw.githubusercontent.com/Oz-Lin/Zr-Leader-Ultimate/main/img/20220708174819_1.jpg)
+![alt text](https://raw.githubusercontent.com/Oz-Lin/Zr-Leader-Ultimate/main/img/20220708174454_1.jpg)
+![alt text](https://raw.githubusercontent.com/Oz-Lin/Zr-Leader-Ultimate/main/img/20220708174420_1.jpg)
+![alt text](https://raw.githubusercontent.com/Oz-Lin/Zr-Leader-Ultimate/main/img/img6.jpg)
+![alt text](https://raw.githubusercontent.com/Oz-Lin/Zr-Leader-Ultimate/main/img/20220708174716_1.jpg)
+![alt text](https://raw.githubusercontent.com/Oz-Lin/Zr-Leader-Ultimate/main/img/20220708175101_1.jpg)
