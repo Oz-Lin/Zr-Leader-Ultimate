@@ -8,6 +8,13 @@
 * Author Anubis, modified by Oz-Lin
 * Version = 1.5.1
 
+## Showcase Video
+YouTube: https://www.youtube.com/watch?v=6G6_qg2UWHk
+
+[![IMAGE ALT TEXT HERE](https://yt-embed.live/embed?v=6G6_qg2UWHk)](https://www.youtube.com/watch?v=6G6_qg2UWHk)
+
+Bilibili: https://www.bilibili.com/video/BV1GG411J7A9
+
 ### Decription:Zr-Leader-Ultimate
 
 * Allows for an admin to select or for regular players to vote for a human to be the leader for the current round. 
