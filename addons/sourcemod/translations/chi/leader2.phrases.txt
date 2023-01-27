@@ -165,6 +165,12 @@
 		"chi"			"{red}[{green}Leader{red}]{default} 当前指挥是 {purple}{1}{default}!"
 	}
 
+	"The current two leaders"
+	{
+		"#format"		"{1:N},{2:N}"
+		"chi"			" {red}[{green}Leader{red}]{default} 当前指挥: {purple}{1}, {2}{default}"
+	}
+
 	"No current leader"
 	{
 		"chi"			"{red}[{green}Leader{red}]{default} 当前没有指挥!"

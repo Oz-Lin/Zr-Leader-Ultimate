@@ -165,6 +165,12 @@
 		"en"			" {red}[{green}Leader{red}]{default} The current leader is {purple}{1}{default}!"
 	}
 
+	"The current two leaders"
+	{
+		"#format"		"{1:N},{2:N}"
+		"en"			" {red}[{green}Leader{red}]{default} Current leaders: {purple}{1}, {2}{default}"
+	}
+
 	"No current leader"
 	{
 		"en"			" {red}[{green}Leader{red}]{default} There is no current leader!"
