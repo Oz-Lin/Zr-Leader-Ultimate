@@ -275,6 +275,7 @@ public int LeaderMenu_Handler(Handle m_LeaderMenu, MenuAction action, int client
 				if (GetClientTeam(client) != CS_TEAM_CT)
 				{
 					CPrintToChat(client, "%t", "Function not available for non-human teams");
+					LeaderMenu(client);
 				}
 				else
 				{
