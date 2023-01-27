@@ -6,7 +6,7 @@
 * Sorry for my English.
 
 * Author Anubis, modified by Oz-Lin
-* Version = 1.5.1
+* Version = 1.5.2
 
 ## Showcase Video
 YouTube: https://www.youtube.com/watch?v=6G6_qg2UWHk
