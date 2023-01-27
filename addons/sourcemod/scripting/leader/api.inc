@@ -52,19 +52,23 @@ public int Native_CurrentLeader_Helper(Handle plugin, int numParams)
 public int Native_SetLeader(Handle plugin, int numParams)
 {
 	SetLeader(GetNativeCell(1));
+	return 0;
 }
 
 public int Native_SetLeader_Helper(Handle plugin, int numParams)
 {
 	SetLeaderHelper(GetNativeCell(1));
+	return 0;
 }
 
 public int Native_RemoveLeader(Handle plugin, int numParams)
 {
 	RemoveLeader(GetNativeCell(1));
+	return 0;
 }
 
 public int Native_RemoveLeader_Helper(Handle plugin, int numParams)
 {
 	RemoveLeader(GetNativeCell(1));
+	return 0;
 }

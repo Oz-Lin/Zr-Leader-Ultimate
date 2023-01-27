@@ -55,6 +55,7 @@ public Action EventRoundStart(Handle event, const char[] name, bool dontBroadcas
 	MuteEventRoundStartEnd();
 	BeaconEventRoundStartEnd();
 	LeaderManagerEventRoundStartEnd();
+	return Plugin_Continue;
 }
 
 public Action EventRoundEnd(Handle event, const char[] name, bool dontBroadcast)
@@ -63,12 +64,14 @@ public Action EventRoundEnd(Handle event, const char[] name, bool dontBroadcast)
 	MuteEventRoundStartEnd();
 	BeaconEventRoundStartEnd();
 	LeaderManagerEventRoundStartEnd();
+	return Plugin_Continue;
 }
 
 public Action EventPlayerDeath(Handle event, const char[] name, bool dontBroadcast)
 {
 	int client = GetClientOfUserId(GetEventInt(event, "userid"));
 	LeaderManagerEventPlayerDeath(client);
+	return Plugin_Continue;
 }
 
 public int ZR_OnClientInfected(int client, int attacker, bool motherInfect, bool respawnOverride, bool respawn)

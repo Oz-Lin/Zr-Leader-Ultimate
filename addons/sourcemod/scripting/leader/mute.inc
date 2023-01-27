@@ -101,7 +101,10 @@ stock void AddMute(int client)
 
 public Action TimerRemoveMute(Handle sTime)
 {
-	if(g_bMuteStatus) RemoveMute();
+	if(g_bMuteStatus) {
+		RemoveMute();
+	}
+	return Plugin_Continue;
 }
 
 stock void RemoveMute()

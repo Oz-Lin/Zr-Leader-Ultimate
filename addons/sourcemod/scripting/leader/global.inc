@@ -76,7 +76,7 @@ char g_sClientNames[MAXPLAYERS+1][MAX_NAME_LENGTH];
 /**
  * Global button count.
  */
- int g_iButtoncount[MAXPLAYERS+1] = 0;
+ int g_iButtoncount[MAXPLAYERS+1] = {0, ... };
 //**
 
 /**

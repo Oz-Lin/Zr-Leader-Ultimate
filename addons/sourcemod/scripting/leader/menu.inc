@@ -34,6 +34,7 @@ void MenuOnCommandsCreate()
 	RegConsoleCmd("sm_leader", Command_Leader, "Opens Leader main menu.");
 	RegConsoleCmd("sm_le", Command_Leader, "Opens Leader main menu.");
 	RegConsoleCmd("sm_l", Command_Leader, "Opens Leader main menu.");
+	RegConsoleCmd("sm_resign", Command_ResignLeader, "Resign yourself from leader");
 }
 
 void HookShortcutOnCommandsCreate()
@@ -151,6 +152,20 @@ public Action QuickCommand(int client, const char[] command, int argc)
 public Action ResetButtonPressed(Handle timer, any client)
 {
 	g_iButtoncount[client] = 0;
+	return Plugin_Continue;
+}
+
+public Action Command_ResignLeader(int client, int args)
+{
+	if(!IsValidClient(client)) return Plugin_Handled;
+
+	if(client == g_iLeaderClient || client == g_iHelperClient)
+	{
+		RemoveLeader(client);
+		CPrintToChatAll("%t", "Resigned from being leader", client);
+		
+	}
+	return Plugin_Handled;
 }
 
 void LeaderMenu(int client)

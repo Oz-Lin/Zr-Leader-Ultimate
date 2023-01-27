@@ -542,8 +542,10 @@ stock void CSayText2(int client, int author, const char[] szMessage)
 
 public Action CEvent_MapStart(Event event, const char[] name, bool dontBroadcast)
 {
-	for(int i = 1; i <= MaxClients; i++)
+	for(int i = 1; i <= MaxClients; i++){
 		CSkipList[i] = false;
+	}
+	return Plugin_Continue;
 }
 
 /**

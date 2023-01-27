@@ -87,7 +87,7 @@ public Action Timer_RenderLeaderLasers(Handle timer) {
             for (int i = 0; i < 3; i++) {
                 g_iLaserHistory[client][i] = 0.0;
             }
-            return;
+            return Plugin_Continue;
         }
 
         // Check if the laser distance is more than 6.0 units.
@@ -113,8 +113,10 @@ public Action Timer_RenderLeaderLasers(Handle timer) {
             for (int i = 0; i < 3; i++) {
                 g_iLaserHistory[client][i] = position[i];
             }
+            
         }
     }
+    return Plugin_Handled;
 }
 
 /**
