@@ -28,7 +28,7 @@
 
 	"Resign from Leader"
 	{
-		"chi"			"辞去指挥"
+		"chi"			"辞去指挥 (!resign)"
 	}
 
 	"Sprite Menu"

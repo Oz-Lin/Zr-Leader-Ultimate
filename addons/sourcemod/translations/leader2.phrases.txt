@@ -28,7 +28,7 @@
 
 	"Resign from Leader"
 	{
-		"en"			"Resign from Leader"
+		"en"			"Resign from Leader (!resign)"
 	}
 
 	"Sprite Menu"

@@ -28,7 +28,7 @@
 
 	"Resign from Leader"
 	{
-		"pt"			"Renunciar Líder"
+		"pt"			"Renunciar Líder (!resign)"
 	}
 
 	"Sprite Menu"

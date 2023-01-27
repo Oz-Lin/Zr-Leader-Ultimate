@@ -28,7 +28,7 @@
 
 	"Resign from Leader"
 	{
-		"ru"			"Уйти из лидера"
+		"ru"			"Уйти из лидера (!resign)"
 	}
 
 	"Sprite Menu"
