@@ -1,5 +1,10 @@
 "Phrases"
 {
+	"Function not available for non-human teams"
+	{
+		"en"			"{red}[{green}Leader{red}]{default} This function is not available for non-human teams."
+	}
+
 	"Leader is disabled"
 	{
 		"en"			"{red}[{green}Leader{red}]{default} Leader Disabled."

@@ -1,5 +1,10 @@
 ﻿"Phrases"
 {
+	"Function not available for non-human teams"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 非人類陣營玩家無法使用此功能."
+	}
+
 	"Leader is disabled"
 	{
 		"zho"			"{red}[{green}Leader{red}]{default} 指揮系統已禁用."

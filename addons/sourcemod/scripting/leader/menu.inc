@@ -272,7 +272,14 @@ public int LeaderMenu_Handler(Handle m_LeaderMenu, MenuAction action, int client
 			// Menu Leader
 			if(StrEqual(info, "m_sprite"))
 			{
-				SpriteMenu(client);
+				if (GetClientTeam(client) != CS_TEAM_CT)
+				{
+					CPrintToChat(client, "%t", "Function not available for non-human teams");
+				}
+				else
+				{
+					SpriteMenu(client);
+				}
 			}
 			if(StrEqual(info, "m_marker"))
 			{
@@ -280,12 +287,26 @@ public int LeaderMenu_Handler(Handle m_LeaderMenu, MenuAction action, int client
 			}
 			if(StrEqual(info, "m_beacon"))
 			{
-				PerformBeacon(client);
+				if (GetClientTeam(client) != CS_TEAM_CT)
+				{
+					CPrintToChat(client, "%t", "Function not available for non-human teams");
+				}
+				else
+				{
+					PerformBeacon(client);
+				}
 				LeaderMenu(client);
 			}
 			if(StrEqual(info, "m_glow"))
 			{
-				PerformGlow(client);
+				if (GetClientTeam(client) != CS_TEAM_CT)
+				{
+					CPrintToChat(client, "%t", "Function not available for non-human teams");
+				}
+				else
+				{
+					PerformGlow(client);
+				}
 				LeaderMenu(client);
 			}
 			if(StrEqual(info, "m_muteall"))
