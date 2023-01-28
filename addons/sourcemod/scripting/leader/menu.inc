@@ -52,7 +52,7 @@ public Action Command_Leader(int client, int args)
 		return Plugin_Handled;
 	}
 
-	if(GetClientTeam(client) == 2)
+	if(g_bRemoveOnDie && GetClientTeam(client) == 2)
 	{
 		CReplyToCommand(client, "%t", "You are not a human");
 		return Plugin_Handled;
