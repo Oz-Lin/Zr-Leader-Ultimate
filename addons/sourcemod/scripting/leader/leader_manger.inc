@@ -174,7 +174,10 @@ public void LeaderManagerEventPlayerDeath(int client)
 	{
 		CPrintToChatAll("%t", "The leader has died");
 		g_bLaserEnabled[client] = false;
-
+		KillBeacon(client);
+		RemoveSprite(client);
+		CVAR_SV_FORCE_TRANSMIT_PLAYERS.SetString("0", true, false); // remove glow
+		RemoveSkin(client); // leader/glow.inc remove glow
 		if(g_bRemoveOnDie)
 		{
 			RemoveLeader(client);
@@ -184,7 +187,10 @@ public void LeaderManagerEventPlayerDeath(int client)
 	{
 		CPrintToChatAll("%t", "The leader has died");
 		g_bLaserEnabled[client] = false;
-
+		KillBeacon(client);
+		RemoveSprite(client);
+		CVAR_SV_FORCE_TRANSMIT_PLAYERS.SetString("0", true, false); // remove glow
+		RemoveSkin(client); // leader/glow.inc remove glow
 		if(g_bRemoveOnDie)
 		{
 			RemoveLeader(client);
