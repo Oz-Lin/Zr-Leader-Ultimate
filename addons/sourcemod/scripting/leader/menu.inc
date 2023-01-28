@@ -424,6 +424,65 @@ void Menu_SelectHelperLeader(int client)
 	}
 }
 
+/*
+void Menu_AdminRemoveLeaders(int client)
+{
+	if(!IsValidClient(client))
+	{
+		return;
+	}
+
+	Menu AdminRemove = new Menu(MenuHandler_LeaderHelper); //???
+	SetGlobalTransTarget(client);
+	if (g_Game == Game_CSGO)
+	{
+		//SendConVarValue(client, CVAR_MP_MAXMONEY, "0");
+		//SendConVarValue(client, CVAR_SV_DISABLE_RADAR, "1");
+	}
+
+	char m_title[LENGTH_MAX_TEXT];
+	char strClientID[LENGTH_MIN_TEXT];
+	char strClientName[LENGTH_MED_TEXT];
+
+	int[] alphabetClients = new int[MaxClients+1];
+
+	Format(m_title, sizeof(m_title), "%t\n ", "Menu Remove Leader Player");
+
+	AdminRemove.SetTitle(m_title);
+	AdminRemove.ExitButton = true;
+
+	for (int aClient = 1; aClient <= MaxClients; aClient++)
+	{
+		if (IsValidClient(aClient) && GetClientTeam(aClient) == 3 && aClient != client)
+		{
+			alphabetClients[aClient] = aClient;
+			GetClientName(alphabetClients[aClient], g_sClientNames[alphabetClients[aClient]], sizeof(g_sClientNames[]));
+		}
+	}
+
+	SortCustom1D(alphabetClients, MaxClients, SortByPlayerName);
+
+	for (int i = 0; i < MaxClients; i++)
+	{
+		if (alphabetClients[i]!=0) 
+		{
+			IntToString(GetClientUserId(alphabetClients[i]), strClientID, sizeof(strClientID));
+			FormatEx(strClientName, sizeof(strClientName), "%N", alphabetClients[i]);
+			AdminRemove.AddItem(strClientID, strClientName);
+		}
+	}
+
+	if (AdminRemove.ItemCount == 0) 
+	{
+		delete(AdminRemove);
+	}
+	else
+	{
+		AdminRemove.ExitBackButton = (AdminRemove.ItemCount > 7);
+		DisplayMenu(AdminRemove, client, MENU_TIME_FOREVER);
+	}
+}
+*/
 public int MenuHandler_LeaderHelper(Menu LeaderHelper, MenuAction action, int client, int itemNum)
 {
 	if (action == MenuAction_End)

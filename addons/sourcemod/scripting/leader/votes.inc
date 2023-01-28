@@ -154,11 +154,16 @@ public Action Command_VoteRemoveLeader(int client, int argc)
 		return Plugin_Handled;
 	}
 
-	if(!IsValidClient(g_iLeaderClient))
+	if(!IsValidClient(g_iLeaderClient) && !IsValidClient(g_iHelperClient))
 	{
 		CReplyToCommand(client, "%t", "No current leader");
-		return Plugin_Handled;
+		return Plugin_Handled; // keep checking for helper
 	}
+	//if (!IsValidClient(g_iHelperClient))
+	//{
+	//	CReplyToCommand(client, "%t", "No current leader");
+	//	return Plugin_Handled;
+	//}
 
 	if(GetClientTeam(client) == 2)
 	{
@@ -172,6 +177,10 @@ public Action Command_VoteRemoveLeader(int client, int argc)
 		return Plugin_Handled;
 	}
 
+	// BUG: sm_vrl [helper] removes main leader if two leaders online
+	// BUG: sm_vrl [helper] not working even when main leader resigned
+	// 
+	// 
 	else
 	{
 		char arg[64];
@@ -194,7 +203,7 @@ public Action VoteRemoveLeader(int client, int target)
 		return Plugin_Handled;
 	}
 
-	if(!IsValidClient(g_iLeaderClient))
+	if(!IsValidClient(g_iLeaderClient) && !IsValidClient(g_iHelperClient))
 	{
 		CReplyToCommand(client, "%t", "No current leader");
 		return Plugin_Handled;
@@ -218,11 +227,17 @@ public Action VoteRemoveLeader(int client, int target)
 		return Plugin_Handled;
 	}
 
-	if(g_iLeaderClient != target)
+	// BUG: sm_vrl helper removes the main leader
+	if(g_iLeaderClient != target && g_iHelperClient != target) 
 	{
 		CReplyToCommand(client, "%t", "This Player is not the current leader");
 		return Plugin_Handled;
 	}
+	//if(g_iHelperClient != target)
+	//{
+	//	CReplyToCommand(client, "%t", "This Player is not the current leader");
+	//	return Plugin_Handled;
+	//}
 
 	if(GetClientFromSerial(g_iVotedRemovedFor[client]) != 0)
 	{
@@ -297,6 +312,12 @@ void Menu_VoteLeader_Remove(int client, bool b_RemoveLeader = false)
 			FormatEx(strClientName, sizeof(strClientName), "%N - %t", g_iLeaderClient, "Players Menu", g_iVoteRemoveCount[g_iLeaderClient], GetCtCount()/5);
 			VoteLeaderRemove.AddItem(strClientID, strClientName);
 		}
+		if(IsValidClient(g_iHelperClient))
+		{
+			IntToString(GetClientUserId(g_iHelperClient), strClientID, sizeof(strClientID));
+			FormatEx(strClientName, sizeof(strClientName), "%N - %t", g_iHelperClient, "Players Menu", g_iVoteRemoveCount[g_iHelperClient], GetCtCount()/5);
+			VoteLeaderRemove.AddItem(strClientID, strClientName);
+		}
 	}
 	else
 	{
@@ -340,6 +361,10 @@ void Menu_VoteLeader_Remove(int client, bool b_RemoveLeader = false)
 	}
 }
 
+
+// BUG: if two leaders online, vrl menu choose one always gives "already a leader" 
+// BUG: if only main leader online, vrl menu removes and assign the same leader
+// BUG: if only helper online, vrl vote targeted but not removing
 public int MenuHandler_VoteLeaderRemove(Menu VoteLeaderRemove, MenuAction action, int client, int itemNum)
 {
 	if (action == MenuAction_End)
@@ -361,7 +386,18 @@ public int MenuHandler_VoteLeaderRemove(Menu VoteLeaderRemove, MenuAction action
 		}
 		else
 		{
-			if(IsValidClient(g_iLeaderClient)) VoteRemoveLeader(client, target);
+			if(IsValidClient(g_iLeaderClient) && !IsValidClient(g_iHelperClient)) 
+			{
+				VoteRemoveLeader(client, target);
+			}
+			if(!IsValidClient(g_iLeaderClient) && IsValidClient(g_iHelperClient)) 
+			{
+				VoteRemoveLeader(client, target);
+			}
+			//if(IsValidClient(g_iLeaderClient) && IsValidClient(g_iHelperClient)) 
+			//{
+			//	VoteRemoveLeader(client, target);
+			//}
 			else VoteLeader(client, target);
 		}
 	}

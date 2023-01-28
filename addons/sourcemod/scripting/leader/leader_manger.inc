@@ -77,6 +77,7 @@ public void SetLeaderHelper(int client)
 	}
 }
 
+//public Action RemoveTheLeader(int client, int argc)
 public Action RemoveTheLeader(int client, int args)
 {
 	if(!IsValidClient(client)) return Plugin_Handled;
@@ -101,6 +102,27 @@ public Action RemoveTheLeader(int client, int args)
 		}
 		return Plugin_Handled;
 	}
+	/*
+	if(IsValidClient(g_iHelperClient))
+	{
+		CPrintToChatAll("%t", "Leader has been removed!");
+		RemoveLeader(g_iHelperClient);
+
+		for (int i = 1; i <= MAXPLAYERS; i++)
+		{
+			g_iVotedFor[i] = -1;
+			g_iVotedRemovedFor[i] = -1;
+			g_iVoteCount[i] = 0;
+			g_iVoteRemoveCount[i] = 0;
+		}
+		return Plugin_Handled;
+	}
+	if(argc < 1)
+	{
+		Menu_VoteLeader_Remove(client);
+		return Plugin_Handled;
+	}
+	*/
 	else
 	{
 		CPrintToChat(client, "%t", "No current leader");
