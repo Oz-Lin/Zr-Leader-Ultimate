@@ -79,6 +79,10 @@ public int ZR_OnClientInfected(int client, int attacker, bool motherInfect, bool
 	if(client == g_iLeaderClient)
 	{
 		CPrintToChatAll("%t", "The leader has been infected");
+		KillBeacon(client);
+		RemoveSprite(client);
+		CVAR_SV_FORCE_TRANSMIT_PLAYERS.SetString("0", true, false); // remove glow
+		RemoveSkin(client); // leader/glow.inc remove glow
 		if(g_bRemoveOnDie)
 		{
 			RemoveLeader(client);
@@ -87,6 +91,10 @@ public int ZR_OnClientInfected(int client, int attacker, bool motherInfect, bool
 	else if(client == g_iHelperClient)
 	{
 		CPrintToChatAll("%t", "The leader has been infected");
+		KillBeacon(client);
+		RemoveSprite(client);
+		CVAR_SV_FORCE_TRANSMIT_PLAYERS.SetString("0", true, false); // remove glow
+		RemoveSkin(client); // leader/glow.inc remove glow
 		if(g_bRemoveOnDie)
 		{
 			RemoveLeader(client);

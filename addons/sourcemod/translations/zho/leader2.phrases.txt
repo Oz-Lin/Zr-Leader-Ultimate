@@ -1,5 +1,10 @@
 ﻿"Phrases"
 {
+	"Function not available for non-human teams"
+	{
+		"zho"			"{red}[{green}Leader{red}]{default} 非人類陣營玩家無法使用此功能."
+	}
+
 	"Leader is disabled"
 	{
 		"zho"			"{red}[{green}Leader{red}]{default} 指揮系統已禁用."
@@ -158,6 +163,12 @@
 	{
 		"#format"		"{1:N}"
 		"zho"			"{red}[{green}Leader{red}]{default} 當前指揮是 {purple}{1}{default}!"
+	}
+
+	"The current two leaders"
+	{
+		"#format"		"{1:N},{2:N}"
+		"zho"			" {red}[{green}Leader{red}]{default} 當前指揮: {purple}{1}, {2}{default}"
 	}
 
 	"No current leader"

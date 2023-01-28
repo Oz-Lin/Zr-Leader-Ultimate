@@ -1,5 +1,10 @@
 "Phrases"
 {
+	"Function not available for non-human teams"
+	{
+		"chi"			"{red}[{green}Leader{red}]{default} 非人类阵营玩家无法使用此功能."
+	}
+
 	"Leader is disabled"
 	{
 		"chi"			"{red}[{green}Leader{red}]{default} 指挥系统已禁用."
@@ -158,6 +163,12 @@
 	{
 		"#format"		"{1:N}"
 		"chi"			"{red}[{green}Leader{red}]{default} 当前指挥是 {purple}{1}{default}!"
+	}
+
+	"The current two leaders"
+	{
+		"#format"		"{1:N},{2:N}"
+		"chi"			" {red}[{green}Leader{red}]{default} 当前指挥: {purple}{1}, {2}{default}"
 	}
 
 	"No current leader"

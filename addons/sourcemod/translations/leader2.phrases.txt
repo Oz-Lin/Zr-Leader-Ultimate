@@ -1,5 +1,10 @@
 "Phrases"
 {
+	"Function not available for non-human teams"
+	{
+		"en"			"{red}[{green}Leader{red}]{default} This function is not available for non-human teams."
+	}
+
 	"Leader is disabled"
 	{
 		"en"			"{red}[{green}Leader{red}]{default} Leader Disabled."
@@ -158,6 +163,12 @@
 	{
 		"#format"		"{1:N}"
 		"en"			" {red}[{green}Leader{red}]{default} The current leader is {purple}{1}{default}!"
+	}
+
+	"The current two leaders"
+	{
+		"#format"		"{1:N},{2:N}"
+		"en"			" {red}[{green}Leader{red}]{default} Current leaders: {purple}{1}, {2}{default}"
 	}
 
 	"No current leader"

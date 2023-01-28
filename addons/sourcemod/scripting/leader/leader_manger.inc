@@ -130,10 +130,19 @@ public Action CurrentLeader(int client, int args)
 		CReplyToCommand(client, "%t", "Leader is disabled");
 		return Plugin_Handled;
 	}
-
-	if(IsValidClient(g_iLeaderClient))
+	if(IsValidClient(g_iLeaderClient) && !IsValidClient(g_iHelperClient))
 	{
 		CPrintToChat(client, "%t", "The current leader", g_iLeaderClient);
+		return Plugin_Continue;
+	}
+	if(IsValidClient(g_iHelperClient) && !IsValidClient(g_iLeaderClient))
+	{
+		CPrintToChat(client, "%t", "The current leader", g_iHelperClient);
+		return Plugin_Continue;
+	}
+	if(IsValidClient(g_iLeaderClient) && IsValidClient(g_iHelperClient))
+	{
+		CPrintToChat(client, "%t", "The current two leaders", g_iLeaderClient, g_iHelperClient);
 		return Plugin_Handled;
 	}
 	else
@@ -165,7 +174,10 @@ public void LeaderManagerEventPlayerDeath(int client)
 	{
 		CPrintToChatAll("%t", "The leader has died");
 		g_bLaserEnabled[client] = false;
-
+		KillBeacon(client);
+		RemoveSprite(client);
+		CVAR_SV_FORCE_TRANSMIT_PLAYERS.SetString("0", true, false); // remove glow
+		RemoveSkin(client); // leader/glow.inc remove glow
 		if(g_bRemoveOnDie)
 		{
 			RemoveLeader(client);
@@ -175,7 +187,10 @@ public void LeaderManagerEventPlayerDeath(int client)
 	{
 		CPrintToChatAll("%t", "The leader has died");
 		g_bLaserEnabled[client] = false;
-
+		KillBeacon(client);
+		RemoveSprite(client);
+		CVAR_SV_FORCE_TRANSMIT_PLAYERS.SetString("0", true, false); // remove glow
+		RemoveSkin(client); // leader/glow.inc remove glow
 		if(g_bRemoveOnDie)
 		{
 			RemoveLeader(client);
