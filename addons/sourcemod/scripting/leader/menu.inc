@@ -35,6 +35,8 @@ void MenuOnCommandsCreate()
 	RegConsoleCmd("sm_le", Command_Leader, "Opens Leader main menu.");
 	RegConsoleCmd("sm_l", Command_Leader, "Opens Leader main menu.");
 	RegConsoleCmd("sm_resign", Command_ResignLeader, "Resign yourself from leader");
+	RegConsoleCmd("sm_invleader", Command_InviteLeader, "Appoint a helper (second leader)");
+	RegConsoleCmd("sm_inviteleader", Command_InviteLeader, "Appoint a helper (second leader)");
 }
 
 void HookShortcutOnCommandsCreate()
@@ -162,8 +164,20 @@ public Action Command_ResignLeader(int client, int args)
 	if(client == g_iLeaderClient || client == g_iHelperClient)
 	{
 		RemoveLeader(client);
-		CPrintToChatAll("%t", "Resigned from being leader", client);
-		
+		CPrintToChatAll("%t", "Resigned from being leader", client);		
+	}
+	return Plugin_Handled;
+}
+
+//Expansion: need to do sm_invleader <target> as well
+public Action Command_InviteLeader(int client, int args)
+{
+	if(!IsValidClient(client)) return Plugin_Handled;
+
+	if(IsValidClient(g_iLeaderClient) && !IsValidClient(g_iHelperClient))
+	{
+		RemoveLeader(client);
+		Menu_SelectHelperLeader(client);		
 	}
 	return Plugin_Handled;
 }

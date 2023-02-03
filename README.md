@@ -83,6 +83,8 @@ place defend markers, toggle a rainbow beacon, and maybe more in the future.
 * sm_vrl - Votes to remove the leader. The votes needed are the current player count / 10.
 * +sm_leader_laser - Leader draw laser command (Need to bind a key on the game console manually).
 * sm_resign - Resign command shortcut
+* sm_invleader - Appoint a helper (second leader)
+* sm_inviteleader - Appoint a helper (second leader)
 
 ## Shortcuts
 * Double press +lookatweapon (default as F key) twice quickly to call the leader marker menu.
